@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lendock</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/dropzone.css" />
+</head>
+<body>
+<h1 class="center">Add your car to Lendock</h1>
+<h2 class="center">You can earn money by listing car</h2>
+    <div class="f8-bg">
+<!---Title--->
+        <div class="row padding-top-bot">
+            <div class="medium-6 columns">
+                <label>Add Title to your Listing <span class="faded-text"> 15 Characters Left</span>
+                    <input type="text">
+                </label>
+            </div>
+            <div class="medium-offset-2 medium-4 columns">
+                <p class="add-item-text">We highly recommend you using suitable title for good SEO purposes</p>
+                    <img class="center add-item-icons" src="img/add_item/text168.png">
+            </div>
+            <hr class="padding-top-bot">
+        </div>
+<!---Title-ENDS--->
+
+<!---Description--->
+        <div class="row padding-top-bot">
+            <div class="medium-6 columns">
+                <label>Add description to your listing<span class="faded-text"> 500 Characters Left</span>
+                    <textarea placeholder="" rows="4"></textarea>
+                </label>
+            </div>
+            <div class="medium-offset-2 medium-4 columns">
+                <p class="add-item-text">Attractive and meaningful description is key component for successful car rental</p>
+                <img class="center add-item-icons" src="img/add_item/write12.png">
+            </div>
+            <hr class="padding-top-bot">
+        </div>
+<!---Description-ENDS--->
+
+<!---Specification--->
+        <div class="row padding-top-bot">
+            <div class="medium-8 large-6 columns">
+                <div class="row small-up-2 medium-up-4 large-up-4">
+                    <div class="column filter-adjast">
+                        <img src="img/stacked9.png" class="filters-icon" alt="">
+                        <select class="filters-select">
+                            <option value="convertible">Convertible</option>
+                            <option value="coupe">Coupe</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="hatchback">Hatchback</option>
+                            <option value="suv/offroad">SUV / Offroad</option>
+                            <option value="pickup/truck">Pickup / Truck</option>
+                            <option value="van">Van</option>
+                            <option value="wagon">Wagon</option>
+                            <option value="bus">Bus</option>
+                        </select>
+                    </div>
+                    <div class="column filter-adjast">
+                        <img src="img/silhouette42.png" class="filters-icon" alt="">
+                        <select class="filters-select">
+                            <option value="2">2 Seats</option>
+                            <option value="4">4 Seats</option>
+                            <option value="5">5 Seats</option>
+                            <option value="7">7 Seats</option>
+                            <option value="10+">10+ Seats</option>
+                            <option value="20+">20+ Seats</option>
+
+                        </select>
+                    </div>
+                    <div class="column filter-adjast">
+                        <img src="img/driving2.png" class="filters-icon" alt="">
+                        <select class="filters-select">
+                            <option value="automatic">Automatic</option>
+                            <option value="manual">Manual</option>
+                            <option value="tiptornic">Tiptornic</option>
+
+                        </select>
+                    </div>
+                    <div class="column filter-adjast">
+                        <img src="img/fuel19.png" class="filters-icon" alt="">
+                        <select class="filters-select">
+                            <option value="benzene">Benzene</option>
+                            <option value="gas">Gas</option>
+                            <option value="diesel">Diesel</option>
+                            <option value="hybrid">Hybrid</option>
+                            <option value="Electric">Electric</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="large-offset-2 medium-offset-1 large-4 medium-3 columns">
+                <p class="add-item-text">Give detailed information about your car. This delivers precise search results</p>
+                <img class="center add-item-icons" src="img/add_item/lists5.png">
+            </div>
+            <hr class="padding-top-bot">
+        </div>
+<!---Specification-ENDS--->
+
+<!---img upload-->
+        <div class="row padding-top-bot">
+            <div class="medium-6 columns">
+
+
+                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+
+                <form action="/file-upload" class="dropzone">
+                    <div class="fallback">
+                        <input name="image" type="image" multiple />
+                    </div>
+                </form>
+            </div>
+            <div class="medium-offset-2 medium-4 columns">
+                <p class="add-item-text">Uploading photos creates visual understanding of lisitng. It’s higly recommended to upload different variaety of photos for perfectly visually explaining car.</p>
+                <img class="center add-item-icons" src="img/add_item/photography139.png">
+            </div>
+            <hr class="padding-top-bot">
+        </div>
+<!---img upload-ENDS--->
+
+<!---State_Registry_number--->
+        <div class="row padding-top-bot">
+            <div class="medium-6 columns">
+                <label>Add state registry number of car <span class="faded-text"> 15 Characters Left</span>
+                    <div class="row">
+                        <div class="input-group">
+                            <div class="large-2 medium-3 small-2 columns">
+                                <input class="input-group-field" type="number" placeholder="10" min="10" max="90" >
+                            </div>
+                            <div class="large-2 medium-3 small-2 columns">
+                                <input class="input-group-field" type="text" placeholder="CC">
+                            </div>
+                            <div class="large-2 medium-3 small-3 columns end">
+                                <input class="input-group-field" type="text" placeholder="777">
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <div class="medium-offset-2 medium-4 columns">
+                <p class="add-item-text">Write down registry number of car for identification</p>
+                <img class="center add-item-icons" src="img/add_item/password28.png">
+            </div>
+            <hr class="padding-top-bot">
+        </div>
+</div>
+<div class="row"><br/>
+    <div class="medium-offset-2 medium-7 column center medium-centered">
+        <h4>Thank you for filling information. Your listing will be added NOW!</h4>
+        <h5>You can press submit for adding listing right now or save as a draft for later editing! </h5>
+    </div>
+    <div class="medium-6 columns"><button class="add-item-draft">Save as Draft</button></div>
+    <div class="medium-5 columns"><button class="add-item-submit">Submit</button></div>
+    <br><br/>
+</div>
+<script src="js/dropzone.js"></script>
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/what-input.min.js"></script>
+<script src="js/foundation.min.js"></script>
+<script src="js/app.js"></script>
+
+
+</body>
+</html>
