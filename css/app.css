@@ -1,3 +1,7 @@
+@font-face {
+    font-family: "Gotham";
+    src: url(fonts/GothamBookAZ.ttf);
+}
 .bg-white{
     background-color: #ffffff;
 }
@@ -46,6 +50,36 @@
     width: 66px;
     height: 67px;
     cursor: hand;
+}
+.bar-section-green{
+    background-color: #00B289;
+    display: inline-block;
+    border-left:1px solid #cccccc;
+    width: 70px;
+    height: 67px;
+    cursor: hand;
+}
+.bar-icon{
+    height: 40px;
+}
+.bar-icon img{
+    height: 36px;
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.navt{
+    height: 26px;
+    padding-top: 3px;
+    text-align: center;
+    font-size: 12px;
+}
+.navtw{
+    color:#fff;
+    padding-top: 3px;
+    text-align: center;
+    font-size: 12px;
 }
 .bar-dashboard{
     display: inline-block;
