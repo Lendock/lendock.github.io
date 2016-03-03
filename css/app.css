@@ -2,6 +2,45 @@
     font-family: "Gotham";
     src: url(fonts/GothamBookAZ.ttf);
 }
+.hr-full{
+    max-width: 100%;
+}
+.footer-cont{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+.footer-list{
+    list-style: none;
+    list-style-image: none;
+}
+.social-link{
+    z-index: 10;
+}
+.social-icons{
+    float: right;
+    list-style: none;
+    list-style-image: none;
+}
+.footer-list li{
+    float: left;
+    padding:15px;
+}
+.footer-icon{
+    display: inline-block;
+    padding:5px;
+}
+.footer-icon object{
+    height: 25px;
+    cursor: hand;
+}
+.footer-icon a{
+     z-index: 3;
+     cursor: hand;
+ }
+.footer-icon object:hover{
+    fill:#000;
+}
 .bg-white{
     background-color: #ffffff;
 }
@@ -1031,4 +1070,50 @@ font-size: 16px;
 .tabs-title > .horizontal-tabs-style[aria-selected='true'] {
     background-color: rgba(45,62,80,0.5);
     color:#FFD700;
+}
+/**-------------Login-------------**/
+.login-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 100px 0;
+    padding: 40px 20px 0 20px;
+}
+.fb-login{
+    padding:14px 30px;
+    font-size:14px;
+    background-color: #3b5998;
+    color:#fff;
+}
+.fb-login img{
+    height:20px;
+}
+.tw-login{
+    background-color:#0084b4!important;
+}
+.gp-login{
+    background-color: #dd4b39!important;
+}
+/*---------------SignUp------------*/
+.signup-panel {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 40px;
+    margin-top: 30px;
+}
+.signup-panel i {
+    font-size: 30px;
+    line-height: 50px;
+    color: #999;
+}
+.signup-panel form input, .signup-panel form span {
+    height: 50px;
+}
+.signup-panel .welcome {
+    font-size: 26px;
+    text-align: center;
+    margin-left: 0;
+}
+.signup-panel p {
+    font-size: 13px;
+    font-weight: 200;
 }
