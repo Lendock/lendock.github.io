@@ -71,7 +71,6 @@
 }
 .search-bar .input-group input{
     border: none;
-    border-bottom: 1px solid #cccccc;
     width: 300px;
     background-color: #fff;
     box-shadow: none;
@@ -1116,4 +1115,27 @@ font-size: 16px;
 .signup-panel p {
     font-size: 13px;
     font-weight: 200;
+}
+/*-----------------------CAR-APPROVE-----------------*/
+.specs-approve-car{
+height: 35px;
+display: block;
+margin-left: auto;
+    margin-right: auto;
+}
+.table-approve tr td{
+    border-left:#ddd solid 1px;
+    text-align: center;
+}
+.table-approve tr{
+    border:#ddd 1px solid;
+}
+.align-middle{
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.padding-15{
+    padding:15px;
 }
