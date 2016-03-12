@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Lendock</title>
+    <link rel="stylesheet" href="../css/foundation-flex.css"/>
+    <link rel="stylesheet" href="../css/app.css"/>
+</head>
+<body class="bg-filter">
+<div class="row collapse margin-top-15">
+    <div class="medium-2 columns">
+        <ul class="tabs vertical dashboard-tabs" id="example-vert-tabs">
+            <li class="tabs-title is-active"><a href="profile.html" aria-selected="true">Profile</a></li>
+            <li class="tabs-title"><a href="borrowings.html">My Borrowings</a></li>
+            <li class="tabs-title"><a href="listed.html">Dock</a></li>
+            <li class="tabs-title"><a href="wishlist.html">Wishlist</a></li>
+            <li class="tabs-title"><a href="settings.html">Settings</a></li>
+        </ul>
+    </div>
+    <div class="medium-10 columns">
+        <div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
+            <div class="tabs-panel is-active" id="panel1v">
+                <div class="row">
+                    <div class="small-4 columns center right-border">
+                        <div class="photo-box">
+                            <img class="dashboard-circular-photo" src="../img/ramiz.jpg">
+
+                            <label for="exampleFileUpload">Upload File</label>
+                            <input type="file" id="exampleFileUpload" class="show-for-sr">
+
+                        </div>
+                        <div class="row">
+                            <div class="small-3 columns">
+                                <label for="gender" class="text-right middle">Gender</label>
+                            </div>
+                            <div class="small-9 columns">
+                                <select id="gender">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-3 columns">
+                                <label for="birth-date" class="text-right middle">Birthday</label>
+                            </div>
+                            <div class="small-9 columns">
+                                <select id="birth-date">
+                                    <option>03/02/1994</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns right-border">
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <label for="first" class="text-right middle">First Name</label>
+                            </div>
+                            <div class="small-8 columns">
+                                <input type="text" id="first">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <label for="last" class="text-right middle">Last Name</label>
+                            </div>
+                            <div class="small-8 columns">
+                                <input type="text" id="last">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <label for="user" class="text-right middle">Username</label>
+                            </div>
+                            <div class="small-8 columns">
+                                <input type="text" id="user">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <label for="email" class="text-right middle">Email</label>
+                            </div>
+                            <div class="small-8 columns">
+                                <input type="text" id="email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="small-4 columns">
+                                <label for="location" class="text-right middle">Location</label>
+                            </div>
+                            <div class="small-8 columns">
+                                <input type="text" id="location">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-4 columns">
+                        <label>Bio<span class="faded-text"> Add info about yourself</span>
+                            <textarea placeholder="" rows="4"></textarea>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../js/vendor/jquery.min.js"></script>
+<script src="../js/vendor/what-input.min.js"></script>
+<script src="../js/foundation.min.js"></script>
+<script src="../js/app.js"></script>
+</body>
+</html>
