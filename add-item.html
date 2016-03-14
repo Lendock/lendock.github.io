@@ -16,8 +16,20 @@
 <!---Title--->
         <div class="row padding-top-bot">
             <div class="medium-6 columns">
-                <label>Add Title to your Listing <span class="faded-text"> 15 Characters Left</span>
-                    <input type="text">
+                <label>Add Car Manufacturer <span class="faded-text"></span>
+                    <select>
+                        <option>BMW</option>
+                        <option>Lada</option>
+                    </select>
+                </label>
+                <label>Add Car Model <span class="faded-text"></span>
+                    <select>
+                        <option>M5</option>
+                        <option>X6</option>
+                    </select>
+                </label>
+                <label>Add Car make year <span class="faded-text"></span>
+                    <input type="month"/>
                 </label>
             </div>
             <div class="medium-offset-2 medium-4 columns">
@@ -28,25 +40,10 @@
         </div>
 <!---Title-ENDS--->
 
-<!---Description--->
-        <div class="row padding-top-bot">
-            <div class="medium-6 columns">
-                <label>Add description to your listing<span class="faded-text"> 500 Characters Left</span>
-                    <textarea placeholder="" rows="4"></textarea>
-                </label>
-            </div>
-            <div class="medium-offset-2 medium-4 columns">
-                <p class="add-item-text">Attractive and meaningful description is key component for successful car rental</p>
-                <img class="center add-item-icons" src="img/add_item/write12.png">
-            </div>
-            <hr class="padding-top-bot">
-        </div>
-<!---Description-ENDS--->
-
 <!---Specification--->
         <div class="row padding-top-bot">
-            <div class="medium-8 large-6 columns">
-                <div class="row small-up-2 medium-up-4 large-up-4">
+            <div class="medium-9 large-7 columns">
+                <div class="row small-up-2 medium-up-5 large-up-5">
                     <div class="column filter-adjast">
                         <img src="img/stacked9.png" class="filters-icon" alt="">
                         <select class="filters-select">
@@ -94,7 +91,7 @@
                     </div>
                 </div>
             </div>
-            <div class="large-offset-2 medium-offset-1 large-4 medium-3 columns">
+            <div class="large-offset-2 medium-offset-1 large-3 medium-2 columns">
                 <p class="add-item-text">Give detailed information about your car. This delivers precise search results</p>
                 <img class="center add-item-icons" src="img/add_item/lists5.png">
             </div>
@@ -102,18 +99,27 @@
         </div>
 <!---Specification-ENDS--->
 
+        <!---Description--->
+        <div class="row padding-top-bot">
+            <div class="medium-6 columns">
+                <label>Add description to your listing<span class="faded-text"> 500 Characters Left</span>
+                    <textarea placeholder="" rows="4"></textarea>
+                </label>
+            </div>
+            <div class="medium-offset-2 medium-4 columns">
+                <p class="add-item-text">Attractive and meaningful description is key component for successful car rental</p>
+                <img class="center add-item-icons" src="img/add_item/write12.png">
+            </div>
+            <hr class="padding-top-bot">
+        </div>
+        <!---Description-ENDS--->
 <!---img upload-->
         <div class="row padding-top-bot">
             <div class="medium-6 columns">
 
-
-                <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
-
-                <form action="/file-upload" class="dropzone">
                     <div class="fallback">
-                        <input name="image" type="image" multiple />
+                        <input name="image" type="file" multiple />
                     </div>
-                </form>
             </div>
             <div class="medium-offset-2 medium-4 columns">
                 <p class="add-item-text">Uploading photos creates visual understanding of lisitng. It’s higly recommended to upload different variaety of photos for perfectly visually explaining car.</p>
@@ -159,7 +165,7 @@
     <div class="medium-5 columns"><button class="add-item-submit">Submit</button></div>
     <br><br/>
 </div>
-<footer class="footer-cont">
+<!--footer class="footer-cont">
     <hr class="hr-full">
     <div class="row">
         <div class="column large-8 small-12">
@@ -183,7 +189,7 @@
         </div>
         <div class="column small-12"><div class="text-center">© Lendock inc. 2016</div></div>
     </div>
-</footer>
+</footer-->
 <script src="js/dropzone.js"></script>
 <script src="js/vendor/jquery.min.js"></script>
 <script src="js/vendor/what-input.min.js"></script>
