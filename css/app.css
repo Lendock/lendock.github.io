@@ -647,7 +647,7 @@ background-color: #fff;
     border-bottom: 1px solid #cccccc;
 }
 .request-car-image{
-    display: inline-flex;
+    display: flex;
     float: left;
     width: 27%;
 }
@@ -662,8 +662,8 @@ background-color: #fff;
 .request-item-title{
     display: inline-block;
     font-size:12px;
-    margin-left:5px;
-    width: 70%;
+    margin-left:2px;
+    width: 68%;
 }
 .request-status{
     font-size:11px;
