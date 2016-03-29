@@ -2,11 +2,125 @@
     font-family: "Gotham";
     src: url(fonts/GothamBookAZ.ttf);
 }
+/********* INDEX *********/
+
+.cover-photo{
+    background-image: url("../img/bmw/2015-BMW-M3-sedan-301-876x535.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 350px;
+}
+
+/********* INDEX END*********/
+/*
+----Off-canvas menu!!!-----
+*/
+a {
+    text-decoration: none !important;
+    -webkit-transition: all 225ms ease;
+    -moz-transition: all 225ms ease;
+    transition: all 225ms ease;
+}
+/*header {
+    position: relative;
+    background: #222;
+    height: 50px;
+}
+header a {
+    color: #777;
+}
+header a:hover {
+    color: #fff;
+}
+header .logo {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+}*/
+.panel .toggle-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #333;
+
+    display: none;
+}
+/*header ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header ul li {
+    display: inline-block;
+}
+header ul li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 10px;
+}
+*/
+/*
+article {
+    height: 5000px;
+}
+
+#scotch-panel {
+    background: #444;
+}
+#scotch-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+#scotch-panel ul li a {
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background: transparent;
+    color: #fff;
+}
+#scotch-panel ul li a:hover {
+    background: #555;
+}
+
+@media only screen and (min-width : 769px) {
+    .scotch-panel-canvas {
+        -o-transform: translate3d(0px, 0px, 0px) !important;
+        -ms-transform: translate3d(0px, 0px, 0px) !important;
+        -moz-transform: translate3d(0px, 0px, 0px) !important;
+        -webkit-transform: translate3d(0px, 0px, 0px) !important;
+        transform: translate3d(0px, 0px, 0px) !important;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .panel .toggle-panel {
+        display: block;
+    }
+    .panel ul {
+        display: none;
+    }
+}
+
+/*
+---Off-canvas End!!!-------
+*/
+
 .hr-full{
     max-width: 100%;
 }
 .footer-cont{
-    position: absolute;
     width: 100%;
     bottom: 0px;
 }
@@ -46,16 +160,31 @@
 }
 .menu-logo{
     border-right: 1px solid #cccccc;
-    padding: 6px 15px;
+    padding: 8px 15px;
     float: left;
     display: inline-block;
 }
+.menu-logo-small{
+    padding: 6px 15px;
+    display: inline-block;
+}
+.menu-logo-small img{
+    height: 45px;
+}
 .menu-logo img{
-    height: 54px;
+    height: 45px;
+}
+.margin-top-50{
+    margin-top: 60px;
 }
 .top-bar{
     border-bottom: 1px solid #cccccc;
-    background-color:#fff ;
+    background-color:#fff;
+}
+.dropmid{
+    position: absolute;
+    float: right;
+    box-shadow: 0px 2px 0px #888888;
 }
 .search-bar{
     float: left;
@@ -71,7 +200,7 @@
 }
 .search-bar .input-group input{
     border: none;
-    width: 300px;
+    max-width: 300px;
     background-color: #fff;
     box-shadow: none;
 }
@@ -85,19 +214,78 @@
     float: right;
     display: inline-block;
 }
+.padding0{
+    padding:0px!important;
+}
 .bar-section{
     display: inline-block;
     border-left:1px solid #cccccc;
-    width: 73px;
-    height: 67px;
+    width: 83px;
+    height: 62px;
     cursor: hand;
+}
+#notificationTabs{
+    font-size: 12px;
+    width: 180px;
+    height: 160px;
+}
+.notification-tab a{
+    border-top:none!important;
+    border-left:none!important;
+    border-right:none!important;
+    border-bottom:1px solid #ccc!important;
+}
+.notification-message{
+    border-bottom:1px solid #ccc;
+    height: 55px;
+    width: 100%;
+    padding-top:5px;
+    padding-left:5px;
+    display: block;
+    font-size:12px;
+    overflow:hidden;
+}
+.newMessage{
+    background-color: #ebeef4;
+}
+.newAlert{
+    background-color: #ebeef4;
+}
+.requestDeclined{
+    background-color: #ffe6e6;
+}
+.requestAccepted{
+    background-color:#ebfaeb;
+}
+.notification-sender-name{
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+}
+.ul-scroll{
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 120px;
+}
+.round-photo{
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.no-margin-left{
+    margin-right:0px!important;
 }
 .bar-section-green{
     background-color: #00B289;
     display: inline-block;
     border-left:1px solid #cccccc;
     width: 70px;
-    height: 67px;
+    height: 62px;
     cursor: hand;
 }
 .bar-icon{
@@ -500,6 +688,7 @@ background-color: #fff;
     height: 180px;
     background-color: #fff;
     border:1px solid #cccccc;
+    display: inline-table;
 }
 .listing-price{
     background-color: #00B289;
@@ -623,6 +812,11 @@ background-color: #fff;
 /*--------------Messages--------------*/
 .requests{
     border:1px solid #cccccc;
+    overflow-y:auto;
+}
+.requests-noscroll{
+    border:1px solid #cccccc;
+    overflow:initial;
 }
 .request-1{
     padding:9px;
@@ -647,7 +841,7 @@ background-color: #fff;
     border-bottom: 1px solid #cccccc;
 }
 .request-car-image{
-    display: flex;
+    display: inline-flex;
     float: left;
     width: 27%;
 }
@@ -662,8 +856,8 @@ background-color: #fff;
 .request-item-title{
     display: inline-block;
     font-size:12px;
-    margin-left:2px;
-    width: 68%;
+    margin-left:5px;
+    width: 70%;
 }
 .request-status{
     font-size:11px;
@@ -705,6 +899,7 @@ background-color: #fff;
     height: 80%;
     border-bottom: 1px solid #cccccc;
     position: relative;
+    overflow-y:auto;
 }
 .message-type-field{
     padding:10px;
@@ -934,6 +1129,8 @@ textarea[name=message]{
     border-bottom-right-radius: 0;
     background: #00B289;
     color: #fff;
+    word-wrap: break-word;
+    width: 50%
 }
 .self .avatar {
     order: 2;
@@ -955,6 +1152,8 @@ textarea[name=message]{
 .other .messagest{
     margin-right: 40px;
     max-width: 508px;
+    word-wrap: break-word;
+    width: 50%
 }
 .other .avatar img {
     margin-right: 15px;
@@ -963,6 +1162,7 @@ textarea[name=message]{
     background: #EEEEEE;
     padding: 10px;
     border-radius: 2px;
+    width: 50%;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 .messagest p {
@@ -988,10 +1188,12 @@ textarea[name=message]{
     font-size:15px;
 }
 .dashboard-circular-photo{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
     border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    max-height: 150px;
+    width: 150px;
+    height: 150px;
 }
 .right-border{
     border-right: 1px solid #cccccc;
@@ -1007,7 +1209,6 @@ textarea[name=message]{
 }
 .upload-photo{
     display: block;
-    position: absolute;
     text-align: center;
 }
 .borrowing-img{
