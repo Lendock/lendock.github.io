@@ -1,5 +1,6 @@
 /*------------------------------------------------------------------
 [Table of contents]
+
 	- Top Bar
 	- Nav
 	- Slider
@@ -15,7 +16,12 @@
 	- Features
 	- Info
 	- Footer
+
+- Author:  Andrey Sokoltsov
+- Profile:	http://themeforest.net/user/andreysokoltsov
+
 -------------------------------------------------------------------*/
+
 /* Top Bar */
 .b-topBar {
     border-bottom:1px solid #eeeeee;
@@ -27,6 +33,7 @@
     text-transform: uppercase;
     border-right:1px solid #eeeeee;
 }
+
 .b-topBar__addr{
     padding-left: 35px;
     border-right:1px solid #eeeeee;
@@ -361,12 +368,12 @@ a.m-langLink{
 
 /* Search */
 .b-search{
-
+    height:300px;
 }
 
 .b-search__main{
     text-align: center;
-    height:200px;
+    height:480px;
     margin-top: -125px;
     padding: 35px 60px 50px 60px;
     z-index: 1000;
