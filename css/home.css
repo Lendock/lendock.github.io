@@ -381,12 +381,23 @@ a.m-langLink{
 }
 
 .b-search__main-title h2{
-    font:700 18px 'Open Sans',sans-serif;
+    font:700 18px 'Gotham',sans-serif;
     margin:0;
     padding: 0 10px;
     border-left: 4px solid #fff;
     border-right: 4px solid #fff;
     line-height:1.1;
+}
+.b-search__main-title h3{
+    font:700 14px 'Gotham',sans-serif;
+    margin:0;
+    color:#fff;
+    padding: 0 10px;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    line-height:1.1;
+    text-align: center;
+
 }
 
 .b-search__main-type{
@@ -1776,5 +1787,5 @@ a.m-langLink{
 }
 
 .b-footer__content-nav ul li a{
-    font: 400 12px 'Open Sans',sans-serif;
+    font: 400 12px "Gotham",'Open Sans',sans-serif;
 }
