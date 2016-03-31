@@ -2,7 +2,17 @@
     font-family: "Gotham";
     src: url(fonts/GothamBookAZ.ttf);
 }
+/*--------Media queries------*/
+@media screen and (max-width: 768px) {
+    .tabs-title{
+        display:inline-block!important;
+    }
+}
+/*--------Media queries ENDS------*/
 /********* INDEX *********/
+.m-home .b-nav, .b-footer {
+    background-color: #2d3e50;
+}
 .margin-top-45{
     margin-top: 45px;
 }
@@ -325,6 +335,9 @@ a {
 .border-left{
     border-left: 1px solid #cccccc;
 }
+.tabs-border{
+    border:1px #ccc solid;
+}
 .center{
     margin-left: auto;
     margin-right: auto;
@@ -636,7 +649,7 @@ background-color: #fff;
     display: inline-block;
     vertical-align: bottom;
     overflow: hidden;
-    background-color: #cacccd;
+    background-color: #ccc;
 }
 .lender-rating{
     display: block;
@@ -674,6 +687,10 @@ background-color: #fff;
     font-size: 13px;
     background-color: #00ACC8;
     color:#fff;
+    border:none;
+}
+.border-bottom{
+    border-bottom:1px solid #ccc;
 }
 .calendar-calculator{
     width:100%;
@@ -1195,6 +1212,7 @@ textarea[name=message]{
 }
 .tabs-title{
     border:1px solid #ccc;
+
 }
 .tabs-icons{
     margin-bottom:5px;
@@ -1288,6 +1306,133 @@ font-size: 16px;
     background-color: rgba(45,62,80,0.5);
     color:#FFD700;
 }
+/*------------Borrowings-Dashboard--------*/
+.borrowing-box{
+    border:1px #ccc solid;
+    background-color: #fff;
+}
+.image-panel{
+    height: 200px;
+    width: 100%;
+}
+.img-round{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.borrowing-list-image {
+    top:0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 50%;
+}
+.button-red{
+    color:#D83B44;
+    background-color: #fff;
+    border:1px #ccc solid;
+    margin-top: 6px;
+    margin-bottom:6px;
+}
+.button-red:hover{
+    background-color: #f9f9f9;
+    color:#D83B44;
+}
+.button-green{
+    color:#00B289;
+    background-color: #fff;
+    border:1px #ccc solid;
+}
+.button-green:hover{
+    color:#00B289;
+    background-color: #f9f9f9;
+}
+.buttons-margin{
+    margin-top:6px;
+    margin-bottom:6px;
+}
+.view-invoice{
+    margin:10px;
+    font-size: 15px;
+    display: block;
+}
+.add-sign{
+    padding:20px;
+    margin:20px;
+}
+.add-sign img{
+}
+.rating > span:hover:before {
+    content: "\2605";
+    position: absolute;
+    color:gold;
+    font-size: 16px;
+}
+.review-amount{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    padding: 6px 9px;
+    min-width: 28px;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    background: #ffb400;
+    background: -webkit-linear-gradient(310deg, #ffc333 55%, #ffb400 55%, #ffb400 100%);
+    background: -moz-linear-gradient(310deg, #ffc333 55%, #ffb400 55%, #ffb400 100%);
+    background: -o-linear-gradient(310deg, #ffc333 55%, #ffb400 55%, #ffb400 100%);
+    background: linear-gradient(140deg, #ffc333 55%, #ffb400 55%, #ffb400 100%);
+}
+.alert-amount{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    padding: 6px 9px;
+    min-width: 28px;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    background: #D83B44;
+    background: -webkit-linear-gradient(310deg, #D83B44 55%, #D83C50 55%, #D83C50 100%);
+    background: -moz-linear-gradient(310deg, #D83B44 55%, #D83C50 55%, #D83C50 100%);
+    background: -o-linear-gradient(310deg, #D83B44 55%, #D83C50 55%, #D83C50 100%);
+    background: linear-gradient(140deg, #D83B44 55%, #D83C50 55%, #D83C50 100%);
+}
+.message-amount{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    padding: 6px 9px;
+    min-width: 28px;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    background: -webkit-linear-gradient(310deg, #00B289 55%, #00A289 55%, #00A289 100%);
+    background: -moz-linear-gradient(310deg, #00B289 55%, #00A289 55%, #00A289 100%);
+    background: -o-linear-gradient(310deg, #00B289 55%, #00A289 55%, #00A289 100%);
+    background: linear-gradient(140deg, #00B289 55%, #00A289 55%, #00A289 100%);
+    background: #00B289;
+}
+.thin-line{
+    border:1px #ccc solid
+}
+.dashboard-heading{
+    font-size: 18px;
+    font-weight: bold;
+}
+/*------------Borrowings-Dashboard---ENDS--------*/
 /**-------------Login-------------**/
 .login-box {
     background: #fff;
@@ -1383,4 +1528,49 @@ margin-left: auto;
 .no-after:focus{
     display: none;
 }
+.no-border{
+    border:none;
+    background: none;
+}
 /*------- INVOICE ENDS--------*/
+
+/*------ FOOOTER------*/
+/* Footer */
+.b-footer{
+    margin-top: 50px;
+    padding: 40px 0;
+}
+
+.b-footer .b-nav__logo{
+    float:none;
+}
+
+.b-footer__company p{
+    font: 600 12px 'Gotham',sans-serif;
+    margin: 0 0 0 0;
+}
+
+.b-footer__content{
+    float:right;
+}
+
+.b-footer__content-social{
+    margin: 5px 0 15px 0;
+    font-size:23px;
+    text-align: right;
+}
+
+.b-footer__content-social a{
+    margin-right: 5px;
+}
+
+.b-footer__content-nav ul li{
+    list-style:none;
+    float:left;
+    margin-left: 15px;
+}
+
+.b-footer__content-nav ul li a{
+    font: 400 12px "Gotham",'Open Sans',sans-serif;
+    color:#fff;
+}
