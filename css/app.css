@@ -1191,6 +1191,34 @@ textarea[name=message]{
 }
 
 /*-----------------Dashboard----------------*/
+
+/***image upload****/
+.bfd-dropfield {
+    display: inline;
+    padding: 5px; }
+
+.bfd-dropfield-inner {
+    border: 5px dashed #888;
+    color: #888;
+    cursor: pointer;
+    font-size: 32px;
+    text-align: center; }
+.bfd-dropfield-inner:hover, .bfd-dropfield-inner.bfd-dragover {
+    border-color: #bbb;
+    color: #bbb; }
+
+.bfd-info {
+    overflow: hidden;
+    white-space: nowrap; }
+
+.bfd-error-message {
+    text-align: center; }
+
+.bfd-remove {
+    cursor: pointer; }
+
+/***image upload ENDS****/
+
 .dashboard-tabs{
     text-align: center;
 
@@ -1216,6 +1244,7 @@ textarea[name=message]{
 }
 .tabs-icons{
     margin-bottom:5px;
+    height: 45px;
 }
 .right-border{
     border-right: 1px solid #cccccc;
@@ -1573,4 +1602,7 @@ margin-left: auto;
 .b-footer__content-nav ul li a{
     font: 400 12px "Gotham",'Open Sans',sans-serif;
     color:#fff;
+}
+.hr-dark{
+    border:1px #ccc solid;
 }

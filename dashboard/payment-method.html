@@ -7,7 +7,6 @@
     <title>Lendock</title>
     <link rel="stylesheet" href="../css/bootstrap.css"/>
     <link rel="stylesheet" href="../css/app.css"/>
-    <link rel="icon" type="image/png" href="../img/lendock-favicon.png" />
 </head>
 <body class="bg-filter">
 <header>
@@ -33,16 +32,6 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right no-margin-left">
-                    <li class="bar-section">
-                        <a class="padding0" href="index.html">
-                            <div class="bar-icon">
-                                <img src="../img/dashboard.png">
-                            </div>
-                            <div class="navt">
-                                Dashboard
-                            </div>
-                        </a>
-                    </li>
                     <li class="bar-section">
                         <a class="padding0" href="#">
                             <div class="bar-icon">
@@ -191,162 +180,110 @@
     <div class="row margin-top-65">
         <div class="col-sm-3 col-md-2">
             <ul class="nav nav-pills nav-stacked dashboard-tabs" id="example-vert-tabs">
-                <li class="tabs-title"><a href="profile.html"><img class="tabs-icons" src="../img/profile.png"><br>Profile</a></li>
-                <li class="tabs-title"><a href="borrowings.html"><img class="tabs-icons" src="../img/borrow-icon.png"><br>My Borrowings</a></li>
-                <li class="tabs-title active"><a href="cars.html"><img class="tabs-icons" src="../img/vehicle-white.png"><br>Dock</a></li>
+                <li class="tabs-title"><a href="profile.html"><img class="tabs-icons" src="../img/profile.png"><br>Profile</a>
+                </li>
+                <li class="tabs-title"><a href="borrowings.html"><img class="tabs-icons"
+                                                                      src="../img/borrow-icon.png"><br>My
+                    Borrowings</a></li>
+                <li class="tabs-title"><a href="cars.html"><img class="tabs-icons"
+                                                                src="../img/vehicle.png"><br>Dock</a></li>
                 <li class="tabs-title"><a href="wishlist.html"><img class="tabs-icons" src="../img/wishlist.png"><br>Wishlist</a>
                 </li>
-                <li class="tabs-title"><a href="settings.html"><img class="tabs-icons" src="../img/tool.png"><br>Settings</a>
+                <li class="tabs-title active"><a href="settings.html"><img class="tabs-icons"
+                                                                           src="../img/tool-white.png"><br>Settings</a>
                 </li>
             </ul>
         </div>
         <div class="col-sm-9 col-md-10">
             <div class="row">
                 <ul class="nav nav-pills nav-justified tabs-border">
-                    <li><a href="cars.html">Garage</a></li>
-                    <li class="active"><a href="listed.html">Listed</a></li>
+                    <li><a href="settings.html">Account</a></li>
+                    <li><a href="security.html">Security</a></li>
+                    <li><a href="verifications.html">Verifications</a></li>
+                    <li class="active"><a href="payment-method.html">Payment methods</a></li>
                 </ul>
             </div>
+            <h3 class="margin-bottom-20">Payment methods</h3>
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="borrowing-box margin-top-15">
-                        <div class="image-panel">
-                            <a href="../item-page.html">
-                                <div class="item-price">$120/per day</div>
-                                <div class="borrowing-list-image" style="background-image: url('../img/bmw1.jpg');"></div>
-                            </a>
-                        </div>
-                        <div class="text-center">
-                            <h4>BMW M5 2015</h4>
-                            <span class="text-muted">Current status:<span class="green-color"> Active</span></span> <button class="btn btn-default buttons-margin">Deactivate</button>
-                            <button class="btn button-green">Manage listing</button>
-                            <button class="btn button-red" data-toggle="modal" data-target="#deleteCar">Delete listing</button>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-md-6">
+                    Coming on further updates...
+                    <hr>
+                    <form class="form-horizontal" role="form">
+                        <fieldset>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="card-holder-name">Name on Card</label>
+                                <div class="col-sm-9">
+                                    <input disabled type="text" class="form-control" name="card-holder-name"
+                                           id="card-holder-name" placeholder="Card Holder's Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="card-number">Card Number</label>
+                                <div class="col-sm-9">
+                                    <input disabled type="text" class="form-control" name="card-number" id="card-number"
+                                           placeholder="Debit/Credit Card Number">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="expiry-month">Expiration Date</label>
+                                <div class="col-sm-9">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <select disabled class="form-control col-sm-2" name="expiry-month"
+                                                    id="expiry-month">
+                                                <option>Month</option>
+                                                <option value="01">Jan (01)</option>
+                                                <option value="02">Feb (02)</option>
+                                                <option value="03">Mar (03)</option>
+                                                <option value="04">Apr (04)</option>
+                                                <option value="05">May (05)</option>
+                                                <option value="06">June (06)</option>
+                                                <option value="07">July (07)</option>
+                                                <option value="08">Aug (08)</option>
+                                                <option value="09">Sep (09)</option>
+                                                <option value="10">Oct (10)</option>
+                                                <option value="11">Nov (11)</option>
+                                                <option value="12">Dec (12)</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <select disabled class="form-control" name="expiry-year">
+                                                <option value="16">2016</option>
+                                                <option value="17">2017</option>
+                                                <option value="18">2018</option>
+                                                <option value="19">2019</option>
+                                                <option value="20">2020</option>
+                                                <option value="21">2021</option>
+                                                <option value="22">2022</option>
+                                                <option value="23">2023</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="cvv">Card CVV</label>
+                                <div class="col-sm-3">
+                                    <input type="text" disabled class="form-control" name="cvv" id="cvv"
+                                           placeholder="Security Code">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <button disabled type="button" class="btn btn-success">Save now</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="borrowing-box margin-top-15">
-                        <div class="image-panel">
-                            <a href="../item-page.html">
-                                <div class="item-price">$120/per day</div>
-                                <div class="borrowing-list-image" style="background-image: url('../img/bmw1.jpg');"></div>
-                            </a>
-                        </div>
-                        <div class="text-center">
-                            <h4>BMW M5 2015</h4>
-                            <span class="text-muted">Current status:<span class="green-red"> Deactive</span></span> <button class="btn btn-default buttons-margin">Activate</button>
-                            <button class="btn button-green">Manage listing</button>
-                            <button class="btn button-red" data-toggle="modal" data-target="#deleteCar">Delete listing</button>
-                        </div>
-                    </div>
+                <div class="col-xs-12 col-md-6">
+                    <img class="center-block" src="../img/payment-method-dark.png">
+                    <span class="dashboard-notes">Save payment methods and make payment within few clicks</span>
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <a href="../add-listing.html">
-                        <div class=" btn btn-default borrowing-box margin-top-15">
-                            <img class="add-sign" src="../img/add-sign.png">
-                            <h4>Add Listing</h4>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-
-            <!--div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
-                <div class="tabs-panel is-active">
-                    <div class="text-center">
-                        <div class="row">
-                            <div class="medium-3 columns">
-                                Item
-                            </div>
-                            <div class="medium-3 columns">
-                                Lender
-                            </div>
-                            <div class="medium-3 columns">
-                                Dates
-                            </div>
-                            <div class="medium-3 columns">
-                                Details
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row align-center align-middle">
-                        <div class="small-12 columns"><hr></div>
-                        <div class="medium-3 columns right-border">
-                            BMW M3
-                            <img class="borrowing-img" src="../img/bmw1.jpg">
-                        </div>
-                        <div class="medium-3 columns right-border">
-                            <a href="#" class="borrowings-lender-name">Jason Slasher</a>
-                        </div>
-                        <div class="medium-3 columns right-border">
-                            December 23-25, 2015
-                        </div>
-                        <div class="medium-3 columns">
-                            <a href="#" clas="">View Invoice</a>
-                        </div>
-                    </div>
-                </div>
-            </div-->
-
-            <!--div class="tabs-content vertical" data-tabs-content="example-vert-tabs">
-                <div class="tabs-panel is-active">
-                    <div class="text-center">
-                        <div class="row">
-                            <div class="medium-3 columns">
-                                Item
-                            </div>
-                            <div class="medium-3 columns">
-                                Lender
-                            </div>
-                            <div class="medium-3 columns">
-                                Dates
-                            </div>
-                            <div class="medium-3 columns">
-                                Details
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row align-center align-middle">
-                        <div class="small-12 columns"><hr></div>
-                        <div class="medium-3 columns right-border">
-                            BMW M3
-                            <img class="borrowing-img" src="../img/bmw1.jpg">
-                        </div>
-                        <div class="medium-3 columns right-border">
-                            <a href="#" class="borrowings-lender-name">Jason Slasher</a>
-                        </div>
-                        <div class="medium-3 columns right-border">
-                            December 23-25, 2015
-                        </div>
-                        <div class="medium-3 columns">
-                            <a href="#" clas="">View Invoice</a>
-                        </div>
-                    </div>
-                </div>
-            </div-->
-        </div>
-    </div>
-</div>
-<!--**** Modal ****-->
-<div class="modal fade" id="deleteCar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Do you really want to delete this listing?</h4>
-            </div>
-            <div class="modal-body">
-                After pressing delete <strong>listings</strong> will be removed!<br>
-                Car still will be visible in "Garage" tab of "Dock"
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger">Delete</button>
             </div>
         </div>
     </div>
 </div>
-<!--**** Modal ENDS ****-->
 <footer class="b-footer">
     <a id="to-top" href="#this-is-top"><i class="fa fa-chevron-up"></i></a>
     <div class="container">
@@ -393,8 +330,6 @@
 <script src="../js/vendor/jquery.min.js"></script>
 <script src="../js/vendor/what-input.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="../js/foundation.min.js"></script>
-<script src="../js/app.js"></script>
 <script>
     $('#notificationTabs').on('click', '.nav-tabs a', function () {
         $(this).closest('.dropdown').addClass('dontClose');
