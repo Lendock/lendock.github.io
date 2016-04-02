@@ -2449,6 +2449,7 @@ table th[class*="col-"] {
   .table-responsive {
     width: 100%;
     margin-bottom: 15px;
+    margin-top: 15px;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     border: 1px solid #ddd;
@@ -3183,6 +3184,10 @@ fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary.active {
   background-color: #337ab7;
   border-color: #2e6da4;
+}
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
 }
 .btn-primary .badge {
   color: #337ab7;
