@@ -6561,7 +6561,7 @@ button.close {
 }
 .center-block {
   display: block;
-  margin-right: auto;
+  margin-right: auto!important;
   margin-left: auto;
 }
 .pull-right {

@@ -7,8 +7,8 @@
     <title>Lendock</title>
     <link rel="stylesheet" href="css/bootstrap.css"/>
     <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
 </head>
-<body class="f8-bg">
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid padding0">
@@ -183,48 +183,88 @@
         </div><!-- /.container-fluid -->
     </nav>
 </header>
+<body class="f8-bg">
+<!---Title--->
 <div class="container margin-top-65">
-    <h1 class="center">Add listing to Lendock</h1>
-    <h2 class="center">You can start renting money by listing car</h2>
-    <!---Title--->
+    <h3 class="center">Add your car to Lendock Garage</h3>
+    <h3 class="center">You can earn money by listing car</h3>
     <div class="row padding-top-bot">
         <div class="col-xs-12 col-md-6">
             <div class="form-group">
-                <label for="manufacter">Select car from your Lendock Garage <span class="faded-text"></span></label>
+                <label for="manufacter">Select Manufacturer <span class="faded-text"></span></label>
                 <select id="manufacter" class="form-control">
                     <option>BMW</option>
                     <option>Lada</option>
                 </select>
             </div>
-        </div>
-        <div class="col-xs-12 col-md-6">
-            <label>Set price for listing<span class="faded-text"></span></label>
             <div class="form-group">
-                <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
-                <div class="input-group">
-                    <div class="input-group-addon">AZN</div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                    <div class="input-group-addon">.00</div>
-                </div>
+                <label for="model">Add Car model <span class="faded-text"></span></label>
+                <select id="model" class="form-control">
+                    <option>X6</option>
+                    <option>X5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Add Car make year <span class="faded-text"></span></label>
+                <input class="form-control" type="month"/>
             </div>
         </div>
-    </div>
-    <!---Title-ENDS--->
-    <!---Description--->
-    <div class="row padding-top-bot">
-        <div class="col-xs-12 col-md-6">
-            <div class="form-group">
-                <label>Add description to your listing<span class="faded-text"> 500 Characters Left</span></label>
-                <textarea class="form-control" rows="3"></textarea>
+        <!---Specification--->
+        <div class="row padding-top-bot">
+            <div class="col-xs-4 col-md-3 col-lg-3">
+                <div class="filter-adjast">
+                    <img src="img/stacked9.png" class="filters-icon" alt="">
+                    <div class="filters-select">SUV</div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3 col-lg-3">
+                <div class="filter-adjast">
+                    <img src="img/silhouette42.png" class="filters-icon" alt="">
+                    <div class="filters-select">5 seats</div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3 col-lg-3">
+                <div class="filter-adjast">
+                    <img src="img/driving2.png" class="filters-icon" alt="">
+                    <div class="filters-select">Automatic</div>
+                </div>
+            </div>
+            <div class="col-xs-4 col-md-3 col-lg-3">
+                <div class="filter-adjast">
+                    <img src="img/fuel19.png" class="filters-icon" alt="">
+                    <div class="filters-select">Hybrid</div>
+                </div>
             </div>
         </div>
 
     </div>
-    <!---Description-ENDS--->
+    <!---Specification-ENDS--->
+
+    <!---img upload-->
+    <div class="row padding-top-bot">
+        <div class="col-xs-12">
+            <h3>Upload photos of car</h3>
+            <div class="form-group">
+                <label for="uploadImage">Choose photos describing car at it's best</label>
+                <input class="btn btn-default" value="Upload" type="file" id="uploadImage"/>
+            </div>
+        </div>
+    </div>
+    <!---img upload-ENDS--->
+
+    <!---State_Registry_number--->
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+                <label>Add state registry number of car<span class="faded-text"></span></label>
+                <input class="form-control" type="text"/>
+            </div>
+        </div>
+    </div>
+
     <div class="row"><br/>
-        <div class="medium-offset-2 medium-7 column center medium-centered">
-            <h4>Thank you for filling information. Your listing will be added NOW!</h4>
-            <h5>You can press submit for adding listing right now or save as a draft for later editing! </h5>
+        <div class="col-xs-12 center margin-bottom-20">
+            <h4>Thank you for filling information.  Your car is added to <a href="/dashboard/cars.html">Garage!</a></h4>
         </div>
         <div class="col-xs-offset-2 col-xs-4">
             <button class="btn btn-default add-item-draft">Save as Draft</button>
@@ -278,5 +318,19 @@
 <script src="js/vendor/jquery.min.js"></script>
 <script src="js/vendor/what-input.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.fd.js"></script>
+<script>
+    $('#notificationTabs').on('click', '.nav-tabs a', function () {
+        $(this).closest('.dropdown').addClass('dontClose');
+    })
+
+    $('#messagesDown').on('hide.bs.dropdown', function (e) {
+        if ($(this).hasClass('dontClose')) {
+            e.preventDefault();
+        }
+        $(this).removeClass('dontClose');
+    });
+</script>
+</div>
 </body>
 </html>
