@@ -22,7 +22,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="menu-logo">
-                    <a href="../alerts.html"><img class="" src="../img/lendock-logo.png"></a>
+                    <a href="index.html"><img class="" src="../img/lendock-logo.png"></a>
                 </div>
             </div>
 
@@ -32,16 +32,6 @@
 
                 </ul>
                 <ul class="nav navbar-nav navbar-right no-margin-left">
-                    <li class="bar-section">
-                        <a class="padding0" href="../alerts.html">
-                            <div class="bar-icon">
-                                <img src="../img/dashboard.png">
-                            </div>
-                            <div class="navt">
-                                Dashboard
-                            </div>
-                        </a>
-                    </li>
                     <li class="bar-section">
                         <a class="padding0" href="#">
                             <div class="bar-icon">
@@ -57,18 +47,17 @@
                            data-target="#" aria-haspopup="true"
                            aria-expanded="false">
                             <div class="bar-icon">
+                                <span class="badge-bar">8</span>
                                 <img src="../img/messages.png">
                             </div>
                             <div class="navt">
                                 Notifications<span class="caret"></span>
                             </div>
                         </a>
-
                         <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                             <ul class="nav nav-tabs">
-                                <li class="active notification-tab"><a data-toggle="tab" href="#messages">Messages</a>
-                                </li>
-                                <li class="notification-tab"><a data-toggle="tab" href="#alert">Alerts</a></li>
+                                <li class="notification-tab"><a href="inbox.html">Messages <span class="badge-message">4</span></a></li>
+                                <li class="notification-tab"><a href="alerts.html">Alerts <span class="badge">4</span></a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="messages" class="tab-pane fade in active">
@@ -76,7 +65,7 @@
                                         <a href="#">
                                             <li class="notification-message newMessage">
                                                 <div class="row">
-                                                    <div class="col-xs-4"><img src="img/ramiz.png"
+                                                    <div class="col-xs-4"><img src="../img/ramiz.png"
                                                                                style="height: 45px; width:45px;"
                                                                                class="round-photo"></div>
                                                     <div class="col-xs-8"><span class="notification-sender-name">Ramiz sent you a message</span>
@@ -87,7 +76,7 @@
                                         <a href="#">
                                             <li class="notification-message">
                                                 <div class="row">
-                                                    <div class="col-xs-4"><img src="img/magnifier.png"
+                                                    <div class="col-xs-4"><img src="../img/magnifier.png"
                                                                                style="height: 45px; width:45px;"
                                                                                class="round-photo"></div>
                                                     <div class="col-xs-8"><span class="notification-sender-name">Magnifier sent you a message</span>
@@ -98,7 +87,7 @@
                                         <a href="#">
                                             <li class="notification-message">
                                                 <div class="row">
-                                                    <div class="col-xs-4"><img src="img/questions1.png"
+                                                    <div class="col-xs-4"><img src="../img/questions1.png"
                                                                                style="height: 45px; width:45px;"
                                                                                class="round-photo"></div>
                                                     <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
@@ -106,7 +95,17 @@
                                                 </div>
                                             </li>
                                         </a>
-
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="../img/questions1.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
                                     </ul>
                                 </div>
                                 <div id="alert" class="tab-pane fade">
@@ -126,7 +125,7 @@
                                             <li class="notification-message requestDeclined">
                                                 <div class="row">
                                                     <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-320-876x535.jpg"
+                                                            src="../img/bmw/2015-BMW-M3-sedan-320-876x535.jpg"
                                                             style="height: 45px; width:45px;" class="round-photo"></div>
                                                     <div class="col-xs-8"><span class="notification-sender-name">Javad declined request</span>
                                                     </div>
@@ -137,7 +136,7 @@
                                             <li class="notification-message requestAccepted">
                                                 <div class="row">
                                                     <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            src="../img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
                                                             style="height: 45px; width:45px;" class="round-photo"></div>
                                                     <div class="col-xs-8"><span class="notification-sender-name">Iskandar accepted request</span>
                                                     </div>
@@ -147,7 +146,6 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </ul>
                     </li>
                     <li class="bar-section dropdown">
@@ -208,6 +206,7 @@
                 <ul class="nav nav-pills nav-justified tabs-border">
                     <li class="active"><a href="cars.html">Garage</a></li>
                     <li><a href="listed.html">Listings</a></li>
+                    <li><a href="draft.html">Draft</a></li>
                 </ul>
             </div>
             <div class="row">

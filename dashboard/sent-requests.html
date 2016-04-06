@@ -25,7 +25,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="menu-logo">
-                    <a href="index.html"><img class="" src="../img/lendock-logo.png"></a>
+                    <a href="index.html"><img class="" src="img/lendock-logo.png"></a>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
                     <li class="bar-section">
                         <a class="padding0" href="#">
                             <div class="bar-icon">
-                                <img src="../img/borrow-icon.png">
+                                <img src="img/borrow-icon.png">
                             </div>
                             <div class="navt">
                                 My Borrowings
@@ -50,7 +50,8 @@
                            data-target="#" aria-haspopup="true"
                            aria-expanded="false">
                             <div class="bar-icon">
-                                <img src="../img/messages.png">
+                                <span class="badge-bar">8</span>
+                                <img src="img/messages.png">
                             </div>
                             <div class="navt">
                                 Notifications<span class="caret"></span>
@@ -58,9 +59,8 @@
                         </a>
                         <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
                             <ul class="nav nav-tabs">
-                                <li class="active notification-tab"><a data-toggle="tab" href="#messages">Messages</a>
-                                </li>
-                                <li class="notification-tab"><a href="../alerts.html">Alerts</a></li>
+                                <li class="notification-tab"><a href="inbox.html">Messages <span class="badge-message">4</span></a></li>
+                                <li class="notification-tab"><a href="alerts.html">Alerts <span class="badge">4</span></a></li>
                             </ul>
                             <div class="tab-content">
                                 <div id="messages" class="tab-pane fade in active">
@@ -117,7 +117,7 @@
                                             <li class="notification-message newAlert">
                                                 <div class="row">
                                                     <div class="col-xs-4"><img
-                                                            src="../img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
                                                             style="height: 45px; width:45px;" class="round-photo"></div>
                                                     <div class="col-xs-8"><span class="notification-sender-name">Agahuseyn sent you request</span>
                                                     </div>
@@ -156,7 +156,7 @@
                            aria-haspopup="true"
                            aria-expanded="false">
                             <div class="bar-icon">
-                                <img src="../img/user.png">
+                                <img src="img/user.png">
                             </div>
                             <div class="navt">
                                 Profile<span class="caret"></span>
@@ -175,7 +175,7 @@
                     <li class="bar-section-green">
                         <a class="padding0" href="#">
                             <div class="bar-icon">
-                                <img src="../img/add_item.png">
+                                <img src="img/add_item.png">
                             </div>
                             <div class="navtw">
                                 Add Car
@@ -220,10 +220,8 @@
                             <div class="avatar"><img src="http://i.imgur.com/DY6gND0.png" draggable="false"/></div>
                             <div class="msg">
                                 <p>Hola!</p>
-                                <p>Te vienes a cenar al centro?
-                                    <emoji class="pizza"/>
-                                </p>
-                                <time>20:17</time>
+                                <p>Te vienes a cenar al centro?</p>
+                                <time>3.03.15 20:17</time>
                             </div>
                         </li>
                         <li class="self">
@@ -234,50 +232,37 @@
                                     <emoji class="books"/>
                                 </p>
                                 <p>Mejor otro día</p>
-                                <time>20:18</time>
+                                <time>3.03.15 20:17</time>
                             </div>
                         </li>
                         <li class="self">
                             <div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
                             <div class="msg">
                                 <p>Te apetece jugar a Minecraft?</p>
-                                <time>18:03</time>
+                                <time>3.03.15 20:17</time>
                             </div>
                         </li>
                         <li class="other">
                             <div class="avatar"><img src="http://i.imgur.com/DY6gND0.png" draggable="false"/></div>
                             <div class="msg">
                                 <p>Venga va, hace ya mucho que no juego...</p>
-                                <time>18:07</time>
+                                <time>3.03.15 20:17</time>
                             </div>
                         </li>
                         <li class="self">
                             <div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
                             <div class="msg">
-                                <p>Ehh, me crashea el Launcher...
-                                    <emoji class="cryalot"/>
-                                </p>
-                                <time>18:08</time>
+                                <p>Ehh, me crashea el Launcher...</p>
+                                <time>3.03.15 20:17</time>
                             </div>
                         </li>
-                        <li class="other">
-                            <div class="avatar"><img src="http://i.imgur.com/DY6gND0.png" draggable="false"/></div>
-                            <div class="msg">
-                                <p>
-                                    <emoji class="lmao"/>
-                                </p>
-                                <time>18:08</time>
-                            </div>
-                        </li>
+
                         <li class="self">
                             <div class="avatar"><img src="http://i.imgur.com/HYcn9xO.png" draggable="false"/></div>
                             <div class="msg">
                                 <p>Es broma</p>
                                 <p>Ataque Moai!</p>
-                                <p><span><emoji class="moai"/></span><span><emoji class="moai"/></span><span><emoji
-                                        class="moai"/></span><span><emoji class="moai"/></span><span><emoji
-                                        class="moai"/></span><span><emoji class="moai"/></span></p>
-                                <time>18:09</time>
+                                <time>3.03.15 20:17</time>
                             </div>
                         </li>
                     </ol>
@@ -407,9 +392,6 @@
 </footer><!--b-footer-->
 <script src="../js/vendor/what-input.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="../js/foundation.min.js"></script>
-<script src="../js/app.js"></script>
-
 <script>
     $('#notificationTabs').on('click', '.nav-tabs a', function () {
         $(this).closest('.dropdown').addClass('dontClose');

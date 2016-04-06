@@ -5,85 +5,256 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Lendock</title>
-    <link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/elasticbeanstalk-eu-west-1-003319763104/static/assets/css/foundation-flex.css"/>
-    <link rel="stylesheet" href="https://s3-eu-west-1.amazonaws.com/elasticbeanstalk-eu-west-1-003319763104/static/assets/css/app.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
 </head>
 <body>
-
-<div class="large-5 medium-9 small-12 center columns">
-    <div class="login-box">
-        <div class="row">
-            <div class="small-12 small-centered">
-                <img class="center margin-30" src="img/lendock-logo.png">
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid padding0">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="menu-logo">
+                    <a href="index.html"><img class="" src="img/lendock-logo.png"></a>
+                </div>
             </div>
-            <div class="large-12 columns">
-                <form>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <input type="text" name="username" placeholder="Username" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <input type="password" name="password" placeholder="Password" />
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="small-12 columns center ">
-                            <input type="submit" class="button expand" value="Log In"/>
-                        </div>
-                        </div>
-                    <div class="row columns">
-                        <div class="small-12 margin-30">
-                            Or Login easily with social media accounts
-                        </div>
-                        <div class="small-12 medium-12 large-4 center columns">
-                            <button class="fb-login margin-top-15">Login <img src="img/social-icons-png/facebook-logo-white.png"></button>
-                        </div>
-                        <div class="small-12 medium-12 large-4 columns center">
-                            <button class="fb-login tw-login margin-top-15">Login <img src="img/social-icons-png/twitter-logo-white.png"></button>
-                        </div>
-                        <div class="small-12 medium-12 large-4 columns end center">
-                            <button class="fb-login gp-login margin-top-15">Login <img src="img/social-icons-png/google-plus-white.png"></button>
-                        </div>
-                    </div>
-                </form>
-            </div><br>
-        </div>
-        <div class="row columns">
-            <div class="center margin-top-15 margin-30">New to Lendock <a href="signup.html">Signup here &raquo</a></div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right no-margin-left">
+                    <li class="bar-section">
+                        <a class="padding0" href="#">
+                            <div class="bar-icon">
+                                <img src="img/borrow-icon.png">
+                            </div>
+                            <div class="navt">
+                                My Borrowings
+                            </div>
+                        </a>
+                    </li>
+                    <li id="messagesDown" class="bar-section dropdown">
+                        <a id="dLabel" href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
+                           data-target="#" aria-haspopup="true"
+                           aria-expanded="false">
+                            <div class="bar-icon">
+                                <span class="badge-bar">8</span>
+                                <img src="img/messages.png">
+                            </div>
+                            <div class="navt">
+                                Notifications<span class="caret"></span>
+                            </div>
+                        </a>
+                        <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <ul class="nav nav-tabs">
+                                <li class="notification-tab"><a href="inbox.html">Messages <span class="badge-message">4</span></a></li>
+                                <li class="notification-tab"><a href="alerts.html">Alerts <span class="badge">4</span></a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="messages" class="tab-pane fade in active">
+                                    <ul class="padding0 ul-scroll">
+                                        <a href="#">
+                                            <li class="notification-message newMessage">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/ramiz.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Ramiz sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/magnifier.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Magnifier sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/questions1.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/questions1.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div id="alert" class="tab-pane fade">
+                                    <ul class="padding0 ul-scroll">
+                                        <a href="#">
+                                            <li class="notification-message newAlert">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Agahuseyn sent you request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message requestDeclined">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-320-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Javad declined request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message requestAccepted">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Iskandar accepted request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="bar-section dropdown">
+                        <a href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">
+                            <div class="bar-icon">
+                                <img src="img/user.png">
+                            </div>
+                            <div class="navt">
+                                Profile<span class="caret"></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Dock</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </li>
+                    <li class="bar-section-green">
+                        <a class="padding0" href="#">
+                            <div class="bar-icon">
+                                <img src="img/add_item.png">
+                            </div>
+                            <div class="navtw">
+                                Add Car
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<div class="container">
+    <div class="row margin-top-65">
+        <div class="login-main">
+            <img class="center margin-30" src="img/lendock-logo.png">
+            <h3>Please Log In, or <a href="#">Sign Up</a></h3>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6"><a href="#" class="btn btn-lg fb-login btn-block">Facebook <i class="fa fa-facebook-square"></i> </a></div>
+                <div class="col-xs-6 col-sm-6 col-md-6"><a href="#" class="btn btn-lg gp-login btn-block">Google <i class="fa fa-google-plus-square"></i> </a>
+                </div>
+            </div>
+            <div class="login-or">
+                <hr class="hr-or">
+                <span class="span-or">or</span></div>
+            <form role="form">
+                <div class="form-group"><label for="inputUsernameEmail">Username or email</label> <input type="text"
+                                                                                                         class="form-control"
+                                                                                                         id="inputUsernameEmail">
+                </div>
+                <div class="form-group"><a class="pull-right" href="#">Forgot password?</a> <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword"></div>
+                <div class="checkbox pull-right"><label> <input type="checkbox"> Remember me </label></div>
+                <button type="submit" class="btn btn btn-primary"> Log In</button>
+            </form>
         </div>
     </div>
 </div>
 
-<footer class="footer-cont">
-    <hr class="hr-full">
-    <div class="row">
-        <div class="column large-8 small-12">
-            <ul class="footer-list">
-                <li><a href="">About us</a></li>
-                <li><a href="">Help</a></li>
-                <li><a href="">Legal</a></li>
-                <li><a href="">Privacy</a></li>
-                <li><a href="">Press</a></li>
-                <li><a href="">Jobs</a></li>
-                <li><a href="">Partnerships</a></li>
-            </ul>
+<footer class="b-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="b-footer__company">
+                    <div class="b-nav__logo">
+                        <a href="home.html"><img class="center-block footer-logo" src="img/LendockText.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="b-footer__content">
+                    <div class="b-footer__content-social">
+                        <a href="#"><span class="fa fa-facebook-square"></span></a>
+                        <a href="#"><span class="fa fa-twitter-square"></span></a>
+                        <a href="#"><span class="fa fa-linkedin-square"></span></a>
+                        <a href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+                    <nav class="b-footer__content-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms of Privacy & Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <div class="column large-4 medium-4 small-12">
-            <ul class="social-icons">
-                <a class="social-link" href="#"><li class="footer-icon"><object type="image/svg+xml" data="img/social-icons/twitter.svg"></object></li></a>
-                <li class="footer-icon"><a href="#"><object type="image/svg+xml" data="img/social-icons/facebook-logo-button.svg"></object></a></li>
-                <li class="footer-icon"><a href="#"><object type="image/svg+xml" data="img/social-icons/instagram-logo.svg"></object></a></li>
-                <li class="footer-icon"><a href="#"><object type="image/svg+xml" data="img/social-icons/linkedin-button.svg"></object></a></li>
-            </ul>
+        <div class="row">
+            <div class="col-sm-12 lendock-footer-copy">
+                &#169; Lendock
+            </div>
         </div>
-        <div class="column small-12"><div class="text-center">© Lendock inc. 2016</div></div>
     </div>
-</footer>
-<script src="https://s3-eu-west-1.amazonaws.com/elasticbeanstalk-eu-west-1-003319763104/static/assets/js/vendor/jquery.min.js"></script>
-<script src="https://s3-eu-west-1.amazonaws.com/elasticbeanstalk-eu-west-1-003319763104/static/assets/js/vendor/what-input.min.js"></script>
-<script src="https://s3-eu-west-1.amazonaws.com/elasticbeanstalk-eu-west-1-003319763104/static/assets/js/foundation.min.js"></script>
-<script src="https://s3-eu-west-1.amazonaws.com/elasticbeanstalk-eu-west-1-003319763104/static/assets/js/app.js"></script>
+</footer><!--b-footer-->
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
