@@ -12,45 +12,191 @@
     <link rel="stylesheet" href="css/owl.theme.css"/>
 </head>
 <body class="bg-filter">
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid padding0">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="menu-logo">
+                    <a href="index.html"><img class="" src="img/lendock-logo.png"></a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right no-margin-left">
+                    <li class="bar-section">
+                        <a class="padding0" href="#">
+                            <div class="bar-icon">
+                                <img src="img/borrow-icon.png">
+                            </div>
+                            <div class="navt">
+                                My Borrowings
+                            </div>
+                        </a>
+                    </li>
+                    <li id="messagesDown" class="bar-section dropdown">
+                        <a id="dLabel" href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
+                           data-target="#" aria-haspopup="true"
+                           aria-expanded="false">
+                            <div class="bar-icon">
+                                <span class="badge-bar">8</span>
+                                <img src="img/messages.png">
+                            </div>
+                            <div class="navt">
+                                Notifications<span class="caret"></span>
+                            </div>
+                        </a>
+                        <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            <ul class="nav nav-tabs">
+                                <li class="notification-tab"><a href="inbox.html">Messages <span
+                                        class="badge-message">4</span></a></li>
+                                <li class="notification-tab"><a href="alerts.html">Alerts <span
+                                        class="badge">4</span></a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="messages" class="tab-pane fade in active">
+                                    <ul class="padding0 ul-scroll">
+                                        <a href="#">
+                                            <li class="notification-message newMessage">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/ramiz.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Ramiz sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/magnifier.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Magnifier sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/questions1.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img src="img/questions1.png"
+                                                                               style="height: 45px; width:45px;"
+                                                                               class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                                <div id="alert" class="tab-pane fade">
+                                    <ul class="padding0 ul-scroll">
+                                        <a href="#">
+                                            <li class="notification-message newAlert">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Agahuseyn sent you request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message requestDeclined">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-320-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Javad declined request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                        <a href="#">
+                                            <li class="notification-message requestAccepted">
+                                                <div class="row">
+                                                    <div class="col-xs-4"><img
+                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
+                                                            style="height: 45px; width:45px;" class="round-photo"></div>
+                                                    <div class="col-xs-8"><span class="notification-sender-name">Iskandar accepted request</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="bar-section dropdown">
+                        <a href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">
+                            <div class="bar-icon">
+                                <img src="img/user.png">
+                            </div>
+                            <div class="navt">
+                                Profile<span class="caret"></span>
+                            </div>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Wishlist</a></li>
+                            <li><a href="#">Dock</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Help</a></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </li>
+                    <li class="bar-section-green">
+                        <a class="padding0" href="#">
+                            <div class="bar-icon">
+                                <img src="img/add_item.png">
+                            </div>
+                            <div class="navtw">
+                                Add Car
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
 <div class="container">
-    <section class="pin-container">
+    <section class="pin-container margin-top-65">
         <div class="row">
             <div class="col-xs-12 col-md-8">
                 <div class="listing-title">
                     BMW M3
                 </div>
-                <!--div class="listing-gallery-box">
-
-                   <div class="row">
-                       <div class="col-xs-10">
-                            <div class="listing-image"></div>
-                       </div>
-                       <div class="col-xs-2">
-                           <ul class="no-bullet">
-                               <li class="gallery-items">
-                                    <a href="#" class="">
-                                    <img src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg">
-                                    </a>
-                               </li>
-                               <li class="gallery-items">
-                                   <a href="#" class="">
-                                       <img src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg">
-                                   </a>
-                               </li>
-                               <li class="gallery-items">
-                                   <a href="#" class="">
-                                       <img src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg">
-                                   </a>
-                               </li>
-                               <li class="gallery-items">
-                                   <a href="#" class="">
-                                       <img src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg">
-                                   </a>
-                               </li>
-                           </ul>
-
-                       </div>
-                   </div>
+                <div class="listing-gallery-box">
                     <div class="listing-specs">
                         <div class="row">
                             <div class="col-xs-3">
@@ -71,86 +217,44 @@
                             </div>
                         </div>
                     </div>
-                </div-->
-
-                <div id="main_area">
-                    <!-- Slider -->
+                </div>
                     <div class="row">
-                        <div class="col-xs-10">
-                            <div class="col-xs-12" id="slider">
-                                <!-- Top part of the slider -->
-                                <div class="row">
-                                    <div class="col-sm-12" id="carousel-bounding-box">
-                                        <div class="carousel slide" id="myCarousel">
-                                            <!-- Carousel items -->
-                                            <div class="carousel-inner">
-                                                <div class="active listing-image item"
-                                                     style="background-image: url(img/bmw/2015-BMW-M3-sedan-317-876x535.jpg);"
-                                                     data-slide-number="0"></div>
-                                            </div>
-                                            <!-- Carousel nav -->
-                                            <a class="left carousel-control" href="#myCarousel" role="button"
-                                               data-slide="prev">
-                                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                            </a>
-                                            <a class="right carousel-control" href="#myCarousel" role="button"
-                                               data-slide="next">
-                                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                            </a>
-                                        </div>
-                                    </div>
+                        <div class="col-xs-12 col-sm-10 col-md-10">
+                            <div class="row">
+                                <div class="col-sm-12" id="carousel-bounding-box">
+                                    <div class="active listing-image item" style="background-image: url(img/bmw/2015-BMW-M3-sedan-317-876x535.jpg);"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-2" id="slider-thumbs">
-                            <!-- Bottom switcher of slider -->
-                            <ul class="hide-bullets">
+                        <div class="col-xs-12 col-sm-2 col-md-2" id="slider-thumbs">
+                            <ul class="hide-bullets horizontal-list-view">
                                 <li>
-                                    <a class="thumbnail" id="carousel-selector-0">
-                                        <img src="http://placehold.it/150x150&text=zero">
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a class="thumbnail" id="carousel-selector-1"><img
-                                            src="http://placehold.it/150x150&text=1"></a>
-                                </li>
-
-                                <li>
-                                    <a class="thumbnail" id="carousel-selector-2"><img
-                                            src="http://placehold.it/150x150&text=2"></a>
-                                </li>
-
-                                <li>
-                                    <a class="thumbnail" id="carousel-selector-3"><img
-                                            src="http://placehold.it/150x150&text=3"></a>
-                                </li>
-
-                                <li>
-                                    <a class="thumbnail" id="carousel-selector-4"><img
-                                            src="http://placehold.it/150x150&text=4"></a>
-                                </li>
-
-                                <li>
-                                    <a class="thumbnail" id="carousel-selector-5"><img
-                                            src="http://placehold.it/150x150&text=5"></a>
+                                    <a class="thumbnail"><img src="http://placehold.it/150x150&text=zero"></a>
                                 </li>
                                 <li>
-                                    <a class="thumbnail" id="carousel-selector-6"><img
-                                            src="http://placehold.it/150x150&text=6"></a>
+                                    <a class="thumbnail"><img src="http://placehold.it/150x150&text=1"></a>
                                 </li>
-
                                 <li>
-                                    <a class="thumbnail" id="carousel-selector-7"><img
-                                            src="http://placehold.it/150x150&text=7"></a>
+                                    <a class="thumbnail"><img src="http://placehold.it/150x150&text=2"></a>
+                                </li>
+                                <li>
+                                    <a class="thumbnail" ><img src="http://placehold.it/150x150&text=3"></a>
+                                </li>
+                                <li>
+                                    <a class="thumbnail"><img src="http://placehold.it/150x150&text=4"></a>
+                                </li>
+                                <li>
+                                    <a class="thumbnail"><img src="http://placehold.it/150x150&text=5"></a>
+                                </li>
+                                <li>
+                                    <a class="thumbnail"><img src="http://placehold.it/150x150&text=6"></a>
+                                </li>
+                                <li>
+                                    <a class="thumbnail"><img src="http://placehold.it/150x150&text=7"></a>
                                 </li>
                             </ul>
                         </div>
-                        <!--/Slider-->
                     </div>
-
-                </div>
-
                 <div class="listing-desc">
                     <h4>Description</h4>
                     <div class="description">
@@ -182,7 +286,7 @@
                                 BMW M3
                             </div>
                         </div>
-                        <div class="columns col-xs-3 end">
+                        <div class="columns col-xs-3">
                             <div class="listing-review-amount">
                                 4 reviews
                             </div>
@@ -192,7 +296,7 @@
                         <div class="col-xs-offset-1 col-xs-2">
                             <a href="#"><img class="circular-borrowers" src="img/ramiz.jpg"></a>
                         </div>
-                        <div class="columns col-xs-8 end reviews-top-border">
+                        <div class="columns col-xs-8 reviews-top-border">
                             <div class="lender-name">
                                 <a href="#">Ramiz Ismayilov</a>
                             </div>
@@ -214,7 +318,7 @@
                         <div class="col-xs-offset-1 col-xs-2">
                             <a href="#"><img class="circular-borrowers" src="img/ramiz.jpg"></a>
                         </div>
-                        <div class="columns col-xs-8 end reviews-top-border">
+                        <div class="columns col-xs-8 reviews-top-border">
                             <div class="lender-name">
                                 <a href="#">Ramiz Ismayilov</a>
                             </div>
@@ -234,13 +338,10 @@
                     <div class="center margin-30">
                         <button type="button" class="view-more-button">View More</button>
                     </div>
-                    <div id="anchor-1"></div>
                 </div>
-
-
             </div>
-            <div class="col-xs-12 col-md-4 pinned">
-                <div class="calendar-calculator">
+            <div class="col-xs-12 col-md-4">
+                <div class="calendar-calculator pinned">
                     <div class="calendar">
                         <br>
                         <h3 class="center">Calendar</h3>
@@ -251,11 +352,11 @@
                     </div>
                     <table class="dates">
                         <tr>
-                            <th class="no-padding">Star Date:
-                                <input type="text" class="span2 no-bottom-margin" value="" id="dpd1">
+                            <th class="no-padding">Start Date:
+                                <input type="text" class="form-control span2 no-bottom-margin" value="" id="dpd1">
                             </th>
                             <th class="no-padding">End Date:
-                                <input type="text" class="span2 no-bottom-margin" value="" id="dpd2">
+                                <input type="text" class="form-control span2 no-bottom-margin" value="" id="dpd2">
                             </th>
                         </tr>
                     </table>
@@ -303,7 +404,7 @@
                             <td class="social-icons-box">
                                 <a href="#">
                                     <span class="icon-text">Email</span>
-                                    <span class="icon"><img src="img/email5.png"> </span>
+                                    <span class="icon"><i class="fa fa-mail-forward"></i></span>
                                 </a>
                             </td>
                             <td class="social-icons-box">
@@ -332,7 +433,6 @@
             </div>
         </div>
     </section>
-
     <div class="row">
         <hr>
         <h3>Related Cars</h3>
@@ -578,85 +678,139 @@
                 </div>
             </div>
         </div>
-        </div-->
     </div>
-    <script src="js/vendor/jquery.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.pin.min.js"></script>
-    <script>
-        $(".pinned").pin()
-        $(".pinned").pin({
-            containerSelector: ".pin-container"
+</div>
+</div>
+<footer class="b-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="b-footer__company">
+                    <div class="b-nav__logo">
+                        <a href="home.html"><img class="center-block footer-logo" src="img/LendockText.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="b-footer__content">
+                    <div class="b-footer__content-social">
+                        <a href="#"><span class="fa fa-facebook-square"></span></a>
+                        <a href="#"><span class="fa fa-twitter-square"></span></a>
+                        <a href="#"><span class="fa fa-linkedin-square"></span></a>
+                        <a href="#"><span class="fa fa-instagram"></span></a>
+                    </div>
+                    <nav class="b-footer__content-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Terms of Privacy & Policy</a></li>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Press</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 lendock-footer-copy">
+                &#169; Lendock
+            </div>
+        </div>
+    </div>
+</footer><!--b-footer-->
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.pin.min.js"></script>
+<script>
+    $(".pinned").pin()
+    $(".pinned").pin({
+        containerSelector: ".pin-container"
+    })
+
+    $(function(){
+/*
+        $(window).bind("resize",function(){
+            console.log($(this).width())
+            if($(this).width() <940){
+                $('pinned').css('position', 'relative!important').addClass('no-pin')
+            }
+            else{
+                $('div').removeClass('red').addClass('yellow')
+            }
         })
-    </script>
-    <script>
-        jQuery(document).ready(function ($) {
-
-            $('#myCarousel').carousel({
-                interval: 5000
-            });
-
-            //Handles the carousel thumbnails
-            $('[id^=carousel-selector-]').click(function () {
-                var id_selector = $(this).attr("id");
-                try {
-                    var id = /-(\d+)$/.exec(id_selector)[1];
-                    console.log(id_selector, id);
-                    jQuery('#myCarousel').carousel(parseInt(id));
-                } catch (e) {
-                    console.log('Regex failed!', e);
-                }
-            });
-            // When the carousel slides, auto update the text
-            $('#myCarousel').on('slid.bs.carousel', function (e) {
-                var id = $('.item.active').data('slide-number');
-                $('#carousel-text').html($('#slide-content-' + id).html());
-            });
+    })
+    */
+</script>
+<script>
+    jQuery(document).ready(function ($) {
+        $('#myCarousel').carousel({
+            interval: 5000
         });
-    </script>
 
-    <script>
-        $(document).ready(function () {
-            $("#owl-demo").owlCarousel({
-                navigation: true, // Show next and prev buttons
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                singleItem: true,
-                lazyLoad: true
-                // "singleItem:true" is a shortcut for:
-                // items : 1,
-                // itemsDesktop : false,
-                // itemsDesktopSmall : false,
-                // itemsTablet: false,
-                // itemsMobile : false
-            });
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click(function () {
+            var id_selector = $(this).attr("id");
+            try {
+                var id = /-(\d+)$/.exec(id_selector)[1];
+                console.log(id_selector, id);
+                jQuery('#myCarousel').carousel(parseInt(id));
+            } catch (e) {
+                console.log('Regex failed!', e);
+            }
         });
-        $(function () {
-            // implementation of disabled form fields
-            var nowTemp = new Date();
-            var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
-            var checkin = $('#dpd1').fdatepicker({
-                onRender: function (date) {
-                    return date.valueOf() < now.valueOf() ? 'disabled' : '';
-                }
-            }).on('changeDate', function (ev) {
-                if (ev.date.valueOf() > checkout.date.valueOf()) {
-                    var newDate = new Date(ev.date)
-                    newDate.setDate(newDate.getDate() + 1);
-                    checkout.update(newDate);
-                }
-                checkin.hide();
-                $('#dpd2')[0].focus();
-            }).data('datepicker');
-            var checkout = $('#dpd2').fdatepicker({
-                onRender: function (date) {
-                    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
-                }
-            }).on('changeDate', function (ev) {
-                checkout.hide();
-            }).data('datepicker');
+        // When the carousel slides, auto update the text
+        $('#myCarousel').on('slid.bs.carousel', function (e) {
+            var id = $('.item.active').data('slide-number');
+            $('#carousel-text').html($('#slide-content-' + id).html());
         });
-    </script>
+    });
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#owl-demo").owlCarousel({
+            navigation: true, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            lazyLoad: true
+            // "singleItem:true" is a shortcut for:
+            // items : 1,
+            // itemsDesktop : false,
+            // itemsDesktopSmall : false,
+            // itemsTablet: false,
+            // itemsMobile : false
+        });
+    });
+    $(function () {
+        // implementation of disabled form fields
+        var nowTemp = new Date();
+        var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+        var checkin = $('#dpd1').fdatepicker({
+            onRender: function (date) {
+                return date.valueOf() < now.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function (ev) {
+            if (ev.date.valueOf() > checkout.date.valueOf()) {
+                var newDate = new Date(ev.date)
+                newDate.setDate(newDate.getDate() + 1);
+                checkout.update(newDate);
+            }
+            checkin.hide();
+            $('#dpd2')[0].focus();
+        }).data('datepicker');
+        var checkout = $('#dpd2').fdatepicker({
+            onRender: function (date) {
+                return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+            }
+        }).on('changeDate', function (ev) {
+            checkout.hide();
+        }).data('datepicker');
+    });
+</script>
 </body>
 </html>

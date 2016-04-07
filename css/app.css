@@ -21,10 +21,35 @@
     .off-canvas {
         display: block !important;
     }
-
     .inbox-request {
         height: inherit !important;
         margin-bottom: 10px;
+    }
+    .calendar-calculator{
+        display:none!important;
+    }
+    .circular-borrowers{
+        max-height: 45px!important;
+    }
+    .horizontal-list-view li{
+        display: inline-block!important;
+    }
+    .hide-bullets{
+        list-style: none;
+        margin-left: -20px;
+        overflow: hidden;
+        overflow-x: scroll;
+        height: 60px;
+    }
+    .listing-image{
+        height: 230px!important;
+        background-size: contain!important;
+    }
+    .hide-bullets li{
+        height: 70px!important;
+    }
+    .listing-spec-details{
+        font-size: 11px!important;
     }
 }
 
@@ -905,7 +930,10 @@ a {
     background-color: transparent;
     border: none;
 }
-
+.dates th{
+    padding:10px;
+    text-align: center;
+}
 .no-padding {
     font-weight: normal;
     padding-bottom: 0px;
@@ -1073,56 +1101,50 @@ a {
 }
 
 /*------------- Listing ------------*/
-.hide-bullets {
+.hide-bullets{
     list-style: none;
     margin-left: -20px;
     overflow: hidden;
     overflow-y: scroll;
     height: 400px;
 }
-
 .thumbnail {
     padding: 0;
 }
-
+.horizontal-list-view li{
+    display: block;
+}
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     width: 100%;
 }
-
 .listing-title {
     font-size: 22px;
 }
-
 .listing-desc {
     margin-top: 15px;
 }
-
 .listing-gallery-box {
     background-color: #fff;
 }
-
 .listing-image {
     background: no-repeat center center;
     background-size: cover;
     display: block;
     height: 400px;
+    overflow: hidden;
 }
-
 .gallery-items img {
     width: inherit;
 }
-
 .gallery-items {
     display: inline-block;
     position: relative;
     margin-bottom: 10px;
     max-width: 180px;
 }
-
 .listing-specs {
     margin-top: 7px;
 }
-
 .listing-specs img {
     margin-top: 16px;
     margin-bottom: 4px;
@@ -1131,30 +1153,25 @@ a {
     height: 35px;
     display: block;
 }
-
 .lender-info {
     width: 85%;
     display: block;
 }
-
 .lender-image {
     margin-right: 15px;
     display: inline-block;
 }
-
 .circular {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
 }
-
 .circular-borrowers {
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     max-height: 80px;
 }
-
 .review-text {
     font-size: 14px;
     display: block;
@@ -2038,6 +2055,7 @@ textarea[name=message] {
     width: 100%;
     height: 100%;
     background-position: 50% 50%;
+    background-size: cover;
 }
 
 .button-red {
@@ -2435,4 +2453,7 @@ textarea[name=message] {
     border: 1px solid #ccc;
     height: 60vh;
     background-color: #fff;
+}
+.border{
+    border:1px #ccc solid;
 }
