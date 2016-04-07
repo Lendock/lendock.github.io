@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Foundation-FrontEnd.iml" filepath="$PROJECT_DIR$/.idea/Foundation-FrontEnd.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/LendockFE.iml" filepath="$PROJECT_DIR$/.idea/LendockFE.iml" />
     </modules>
   </component>
 </project>
