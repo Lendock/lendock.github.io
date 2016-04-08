@@ -1963,17 +1963,19 @@ textarea[name=message] {
 #draft-listed {
 
 }
-
+.yellow-color{
+    color:#FFD700!important;
+}
 .blue-color {
     color: #00ACC8;
 }
 
 .red-color {
-    color: #D83B44;
+    color: #D83B44!important;
 }
 
 .green-color {
-    color: #00B289;
+    color: #00B289!important;
 }
 
 .dashboard-notes {
