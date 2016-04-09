@@ -5,8 +5,7 @@
 	/*box-shadow: 0 0 8px rgba(102,175,233,.6);*/
 	display: none;
 	/*margin-top: 0px;*/
-	padding: 10px;
-	width: 316px;
+	width: 100%;
 }
 .ui-datepicker a,
 .ui-datepicker a:hover {
@@ -27,12 +26,14 @@
 }
 .ui-datepicker .ui-datepicker-title {
 	font-weight: 700;
-	font-family: 'Courier';
+	font-family: 'Gotham', "Open Sans";
+	color:#fff;
 }
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
-	cursor: default;
-	font-family: 'Glyphicons Halflings';
+	cursor: pointer;
+	color: #fff;
+	font-family: "Gotham";
 	-webkit-font-smoothing: antialiased;
 	font-style: normal;
 	font-weight: normal;
@@ -44,18 +45,17 @@
 .ui-datepicker .ui-datepicker-prev {
 	float: left;
 	text-align: left;
-	color: #404040;
 }
 .ui-datepicker .ui-datepicker-next {
 	float: right;
 	text-align: right;
-	color: #404040;
+	margin-right:5px;
 }
 .ui-datepicker .ui-datepicker-prev:before {
-	content: "➭";
+	content: "Prev";
 }
 .ui-datepicker .ui-datepicker-next:before {
-	content: "➭";
+	content: "Next";
 }
 .ui-datepicker .ui-icon {
 	display: none;

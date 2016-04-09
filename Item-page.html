@@ -343,8 +343,7 @@
             <div class="col-xs-12 col-md-4">
                 <div class="calendar-calculator">
                     <div class="calendar">
-                        <br>
-                        <h3 class="center">Calendar</h3>
+                        <div id="calendar"></div>
                     </div>
                     <div class="listing-price">
                         <span class="price">$90</span>
@@ -769,7 +768,8 @@
         });
     });
 </script>
-
+<link rel="stylesheet" href="css/datepicker.css">
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script>
     $(document).ready(function () {
         $("#owl-demo").owlCarousel({
@@ -810,6 +810,9 @@
         }).on('changeDate', function (ev) {
             checkout.hide();
         }).data('datepicker');
+    });
+    $("#calendar").datepicker({
+
     });
 </script>
 </body>
