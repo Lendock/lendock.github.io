@@ -1,260 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Lendock</title>
-    <link rel="stylesheet" href="css/bootstrap.css"/>
-    <link rel="stylesheet" href="css/app.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="keywords" content="maşın arenda toy maşını gəlin maşını"/>
+	<meta name="description" content="Gəlin maşını icarəsi">
+	<meta name="author" content="">
+	
+	<!-- Title -->
+	<title>Listingpro - Home</title>
+	
+	<!-- Mobile Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+	
+	<!-- CSS -->
+	<link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet" />
+	<link href="css/colors.css" type="text/css" rel="stylesheet" />
+	<link href="css/font.css" type="text/css" rel="stylesheet" />
+	<link href="lib/jQuery.filer-master/css/jquery.filer.css" type="text/css" rel="stylesheet" />
+	<link href="lib/popup/css/component.css" type="text/css" rel="stylesheet" />
+	<link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+	<link type="text/css" rel="stylesheet" href="lib/jquerym.menu/css/jquery.mmenu.all.css" />
+	<link href='css/mapbox.css' rel='stylesheet' />
+	<link href='lib/chosen/chosen.css' rel='stylesheet' />
+	<link href="css/main.css" type="text/css" rel="stylesheet" />
+	<link href="css/app.css" type="text/css" rel="stylesheet" />
+
+	<!-- IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid padding0">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="menu-logo">
-                    <a href="index.html"><img class="" src="img/lendock-logo.png"></a>
-                </div>
-            </div>
+	<!--==================================Header Open=================================-->
+	<div id="page">
+	<header>
+		<!-- Login Popup -->
+		<div class="login-logo">
+			<img src="images/lendock-logo.png" alt="lendock">
+		</div>
+	</header>
+	<!--==================================Header Close=================================-->
+	
+	<!--==================================Section Open=================================-->
+	<section>
+		<div class="ld-section-row aliceblue">
+			<div class="ld-section-content-container-one">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="login-form-popup ld-border-radius-8">
+								<div class="siginincontainer">
+									<h1 class="text-center">Giriş et</h1>
+									<form class="form-horizontal margin-top-30"  method="post">
+										<div class="form-group">
+											<label for="siusername">Email ünvan *</label>
+											<input type="text" class="form-control" id="siusername" />
+										</div>
+										<div class="form-group">
+											<label for="sipassword">Şifrə *</label>
+											<input type="password" class="form-control" id="sipassword" />
+										</div>
+										<div class="form-group">
+											<div class="checkbox pad-bottom-10">
+												<input id="check1" type="checkbox" name="price-on-call" value="price-on-call">
+												<label for="check1">yadda saxla</label>
+											</div>
+										</div>
+										
+										<div class="form-group">
+											<input type="submit" value="Giriş" class="ld-secondary-btn width-full btn-first-hover" />
+										</div>
+									</form>	
+									<div class="pop-form-bottom">
+										<div class="bottom-links">
+											<a  class="signUpClick">Üzv deyilsiz? Qeydiyyatdan keçin</a>
+											<a  class="forgetPasswordClick pull-right" >Şifrəni unutmusuz?</a>
+										</div>
+										<p class="margin-top-15">Sürətli giriş</p>
+										<ul class="social-login list-style-none">
+											<li><button class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
+											<li><button class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
+										</ul>
+									</div>
+								<a class="md-close"><i class="fa fa-close"></i></a>
+								</div>
+								<div class="siginupcontainer">
+									<h1 class="text-center">Qeydiyyat</h1>
+									<form class="form-horizontal margin-top-30"  method="post">
+										<div class="form-group">
+											<label for="fullname">Ad Soyad *</label>
+											<input type="text" class="form-control" id="fullname" />
+										</div>
+										<div class="form-group">
+											<label for="supassword">Email ünvan *</label>
+											<input type="email" class="form-control" id="supassword" />
+										</div>
+										<div class="form-group">
+											<label for="singuppassword">Şifrə *</label>
+											<input type="password" class="form-control" id="singuppassword" />
+										</div>
+										<div class="form-group">
+											<input type="submit" value="Qeydiyyat" class="ld-secondary-btn width-full btn-first-hover" />
+										</div>
+									</form>	
+									<div class="pop-form-bottom">
+										<div class="bottom-links">
+											<a class="signInClick" >Qeydiyyatdan keçmisiniz? Giriş edin</a>
+											<a class="forgetPasswordClick pull-right" >Şifrəni unutmusuz?</a>
+										</div>
+										<p class="margin-top-15">Sürətli qeydiyyat</p>
+										<ul class="social-login list-style-none">
+											<li><button  class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
+											<li><button  class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
+										</ul>
+									</div>
+								<a class="md-close"><i class="fa fa-close"></i></a>
+								</div>
+								<div class="forgetpasswordcontainer">
+									<h1 class="text-center">Şifrə bərpası</h1>
+									<form class="form-horizontal margin-top-30"  method="post">
+										<div class="form-group">
+											<label for="fpassword">Email ünvan *</label>
+											<input type="email" class="form-control" id="fpassword" />
+										</div>
+										<div class="form-group">
+											<input type="submit" value="Şifrəni yenilə" class="ld-secondary-btn width-full btn-first-hover" />
+										</div>
+									</form>	
+									<div class="pop-form-bottom">
+										<div class="bottom-links">
+											<a class="cancelClick" >Ləğv etmək</a>
+										</div>
+									</div>
+								<a class="md-close"><i class="fa fa-close"></i></a>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- ../section-row -->
+	
+	</section>
+	<!--==================================Section Close=================================-->
+	
+	<!--==================================Footer Open=================================-->
+		<footer class="text-center">
+			<div class="footer-upper-bar">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="footer-menu">
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="login.html">Login</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div><!-- ../footer-upper-bar -->
+			<div class="footer-bottom-bar">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="footer-about-company">
+								<li>Copyright © 2016</li>
+								<li>Ahmad Rajabli 153</li>
+								<li>Tel: 555 77 99</li>
+							</ul>
+							<p class="credit-links">Proudly by <a href="#"
+																  target="_blank">Lendock</a></p>
+							<ul class="social-icons footer-social-icons">
+								<li><a href="#">
+									<i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a></li>
+								<li><a href="#">
+									<i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="#">
+									<i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a></li>
+								<li><a href="#">
+									<i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a></li>
+								<li><a href=""><i class="fa fa-2x fa-youtube" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div><!-- ../footer-bottom-bar -->
+		</footer>
+	<!--==================================Footer Close=================================-->
+	<a href="post-submit.html" class="add-listing-mobile ld-search-btn">Add listing</a>
+	</div>
+	
+	
+	<!--==================================Javscript=================================-->
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
 
-                </ul>
-                <ul class="nav navbar-nav navbar-right no-margin-left">
-                    <li class="bar-section">
-                        <a class="padding0" href="#">
-                            <div class="bar-icon">
-                                <img src="img/borrow-icon.png">
-                            </div>
-                            <div class="navt">
-                                My Borrowings
-                            </div>
-                        </a>
-                    </li>
-                    <li id="messagesDown" class="bar-section dropdown">
-                        <a id="dLabel" href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
-                           data-target="#" aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="bar-icon">
-                                <span class="badge-bar">8</span>
-                                <img src="img/messages.png">
-                            </div>
-                            <div class="navt">
-                                Notifications<span class="caret"></span>
-                            </div>
-                        </a>
-                        <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                            <ul class="nav nav-tabs">
-                                <li class="notification-tab"><a href="inbox.html">Messages <span class="badge-message">4</span></a></li>
-                                <li class="notification-tab"><a href="alerts.html">Alerts <span class="badge">4</span></a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="messages" class="tab-pane fade in active">
-                                    <ul class="padding0 ul-scroll">
-                                        <a href="#">
-                                            <li class="notification-message newMessage">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/ramiz.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Ramiz sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/magnifier.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Magnifier sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/questions1.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/questions1.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </div>
-                                <div id="alert" class="tab-pane fade">
-                                    <ul class="padding0 ul-scroll">
-                                        <a href="#">
-                                            <li class="notification-message newAlert">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
-                                                            style="height: 45px; width:45px;" class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Agahuseyn sent you request</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message requestDeclined">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-320-876x535.jpg"
-                                                            style="height: 45px; width:45px;" class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Javad declined request</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message requestAccepted">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
-                                                            style="height: 45px; width:45px;" class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Iskandar accepted request</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="bar-section dropdown">
-                        <a href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="bar-icon">
-                                <img src="img/user.png">
-                            </div>
-                            <div class="navt">
-                                Profile<span class="caret"></span>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Dock</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Sign Out</a></li>
-                        </ul>
-                    </li>
-                    <li class="bar-section-green">
-                        <a class="padding0" href="#">
-                            <div class="bar-icon">
-                                <img src="img/add_item.png">
-                            </div>
-                            <div class="navtw">
-                                Add Car
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-</header>
-<div class="container">
-    <div class="row margin-top-65">
-        <div class="login-main">
-            <img class="center margin-30" src="img/lendock-logo.png">
-            <h3>Please Log In, or <a href="#">Sign Up</a></h3>
-            <div class="row">
-                <div class="col-xs-6 col-sm-6 col-md-6"><a href="#" class="btn btn-lg fb-login btn-block">Facebook <i class="fa fa-facebook-square"></i> </a></div>
-                <div class="col-xs-6 col-sm-6 col-md-6"><a href="#" class="btn btn-lg gp-login btn-block">Google <i class="fa fa-google-plus-square"></i> </a>
-                </div>
-            </div>
-            <div class="login-or">
-                <hr class="hr-or">
-                <span class="span-or">or</span></div>
-            <form role="form">
-                <div class="form-group"><label for="inputUsernameEmail">Username or email</label> <input type="text"
-                                                                                                         class="form-control"
-                                                                                                         id="inputUsernameEmail">
-                </div>
-                <div class="form-group"><a class="pull-right" href="#">Forgot password?</a> <label for="inputPassword">Password</label>
-                    <input type="password" class="form-control" id="inputPassword"></div>
-                <div class="checkbox pull-right"><label> <input type="checkbox"> Remember me </label></div>
-                <button type="submit" class="btn btn btn-primary"> Log In</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<footer class="b-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-4">
-                <div class="b-footer__company">
-                    <div class="b-nav__logo">
-                        <a href="home.html"><img class="center-block footer-logo" src="img/LendockText.png"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-8">
-                <div class="b-footer__content">
-                    <div class="b-footer__content-social">
-                        <a href="#"><span class="fa fa-facebook-square"></span></a>
-                        <a href="#"><span class="fa fa-twitter-square"></span></a>
-                        <a href="#"><span class="fa fa-linkedin-square"></span></a>
-                        <a href="#"><span class="fa fa-instagram"></span></a>
-                    </div>
-                    <nav class="b-footer__content-nav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Terms of Privacy & Policy</a></li>
-                            <li><a href="#">Legal</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Press</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 lendock-footer-copy">
-                &#169; Lendock
-            </div>
-        </div>
-    </div>
-</footer><!--b-footer-->
-
-<script src="js/vendor/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
+		<script type="text/javascript" src="js/jquery-lib.js"></script><!-- Jquery Library -->
+		<script type="text/javascript" src="js/jquery-migrate-1.3.0.min.js"></script>
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script type="text/javascript" src='js/mapbox.js'></script>
+		<script type="text/javascript" src='js/leaflet.markercluster.js'></script>
+		<script type="text/javascript" src="js/build.min.js"></script>
+		<script type="text/javascript" src="lib/chosen/chosen.jquery.js" ></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="lib/slick/slick.min.js"></script>
+		<script type="text/javascript" src="lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript" src="lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+		<script type="text/javascript" src="lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap-rating.js"></script>
+		<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
+		<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
+		<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="maşın arenda toy maşını gəlin maşını"/>
+    <meta name="description" content="Gəlin maşını icarəsi">
+    <meta name="author" content="">
+
+    <!-- Title -->
+    <title>Lendock - Maşın icarəsi</title>
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="css/colors.css" type="text/css" rel="stylesheet"/>
+    <link href="css/font.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/jQuery.filer-master/css/jquery.filer.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/jQuery.filer-master/css/themes/jquery.filer-dragdropbox-theme.css" type="text/css"
+          rel="stylesheet"/>
+    <link href="lib/Magnific-Popup-master/magnific-popup.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/popup/css/component.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/icon8/styles.min.css" type="text/css" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="lib/jquerym.menu/css/jquery.mmenu.all.css"/>
+    <link href='css/mapbox.css' rel='stylesheet'/>
+    <link href='lib/chosen/chosen.css' rel='stylesheet'/>
+    <link href='../../api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css'
+          rel='stylesheet'/>
+    <link href='../../api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css'
+          rel='stylesheet'/>
+    <link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/app.css" type="text/css" rel="stylesheet"/>
+
+    <!-- IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <!--script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script-->
+    <![endif]-->
+</head>
+<body>
+<div id="page">
+    <!--Header transparent no login STARTS-->
+    <header class="ld-header-bg">
+    <div class="ld-menu-bar ld-menu-bar-absolute">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4 col-xs-6 ld-logo-container">
+                    <div class="ld-logo">
+                        <a href="index.html">
+                            <img src="images/logo-white.png" alt="lendock rent car" height="40px"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-6 mobile-nav-icon">
+                    <a href="#menu" class="nav-icon">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li>
+                            <a href="#">Yardım</a>
+                            <ul class="sub-menu">
+                                <li><a href="pricing.html">FAQ</a></li>
+                                <li><a href="404.html">Haqqımızda</a></li>
+                                <li><a href="404.html">Sual ver</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-8 col-xs-12 ld-menu-container">
+                    <div class="pull-right ld-add-listing-btn">
+                        <ul>
+                            <li><a class="md-trigger" data-modal="modal-3"><i class="fa fa-sign-in"
+                                                                              aria-hidden="true"></i> Giriş et</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ld-menu pull-right menu">
+                        <ul>
+                            <li><a href="#">Yardım <i class="icons8-angle-down drop-down-icon"></i></a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Haqqımızda</a></li>
+                                    <li><a href="#">Sual ver</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Header transparent no login ENDS-->
+    <div class="md-modal md-effect-3" id="modal-3">
+        <div class="login-form-popup ld-border-radius-8">
+            <div class="siginincontainer">
+                <h1 class="text-center">Giriş et</h1>
+                <form class="form-horizontal margin-top-30"  method="post">
+                    <div class="form-group">
+                        <label for="siusername">Email ünvan *</label>
+                        <input type="text" class="form-control" id="siusername" />
+                    </div>
+                    <div class="form-group">
+                        <label for="sipassword">Şifrə *</label>
+                        <input type="password" class="form-control" id="sipassword" />
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox pad-bottom-10">
+                            <input id="check1" type="checkbox" name="price-on-call" value="price-on-call">
+                            <label for="check1">yadda saxla</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Giriş" class="ld-secondary-btn width-full btn-first-hover" />
+                    </div>
+                </form>
+                <div class="pop-form-bottom">
+                    <div class="bottom-links">
+                        <a  class="signUpClick">Üzv deyilsiz? Qeydiyyatdan keçin</a>
+                        <a  class="forgetPasswordClick pull-right" >Şifrəni unutmusuz?</a>
+                    </div>
+                    <p class="margin-top-15">Sürətli giriş</p>
+                    <ul class="social-login list-style-none">
+                        <li><button class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
+                        <li><button class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
+                    </ul>
+                </div>
+                <a class="md-close"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="siginupcontainer">
+                <h1 class="text-center">Qeydiyyat</h1>
+                <form class="form-horizontal margin-top-30"  method="post">
+                    <div class="form-group">
+                        <label for="fullname">Ad Soyad *</label>
+                        <input type="text" class="form-control" id="fullname" />
+                    </div>
+                    <div class="form-group">
+                        <label for="supassword">Email ünvan *</label>
+                        <input type="email" class="form-control" id="supassword" />
+                    </div>
+                    <div class="form-group">
+                        <label for="singuppassword">Şifrə *</label>
+                        <input type="password" class="form-control" id="singuppassword" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Qeydiyyat" class="ld-secondary-btn width-full btn-first-hover" />
+                    </div>
+                </form>
+                <div class="pop-form-bottom">
+                    <div class="bottom-links">
+                        <a class="signInClick" >Qeydiyyatdan keçmisiniz? Giriş edin</a>
+                        <a class="forgetPasswordClick pull-right" >Şifrəni unutmusuz?</a>
+                    </div>
+                    <p class="margin-top-15">Sürətli qeydiyyat</p>
+                    <ul class="social-login list-style-none">
+                        <li><button  class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
+                        <li><button  class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
+                    </ul>
+                </div>
+                <a class="md-close"><i class="fa fa-close"></i></a>
+            </div>
+            <div class="forgetpasswordcontainer">
+                <h1 class="text-center">Şifrə bərpası</h1>
+                <form class="form-horizontal margin-top-30"  method="post">
+                    <div class="form-group">
+                        <label for="fpassword">Email ünvan *</label>
+                        <input type="email" class="form-control" id="fpassword" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Şifrəni yenilə" class="ld-secondary-btn width-full btn-first-hover" />
+                    </div>
+                </form>
+                <div class="pop-form-bottom">
+                    <div class="bottom-links">
+                        <a class="cancelClick" >Ləğv etmək</a>
+                    </div>
+                </div>
+                <a class="md-close"><i class="fa fa-close"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="md-overlay"></div> <!-- Overlay for Popup -->
+    </header>
+</div>
+
+<!--==================================Javscript=================================-->
+
+
+<script type="text/javascript" src="js/jquery-lib.js"></script><!-- Jquery Library -->
+<script type="text/javascript" src="js/jquery-migrate-1.3.0.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src='js/mapbox.js'></script>
+<script type="text/javascript" src='js/leaflet.markercluster.js'></script>
+<script type="text/javascript" src="js/build.min.js"></script>
+<script type="text/javascript" src="lib/chosen/chosen.jquery.js" ></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-rating.js"></script>
+<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
+<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

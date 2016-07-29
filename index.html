@@ -1,490 +1,957 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Lendock</title>
-    <link rel="stylesheet" href="css/app.css"/>
-    <link rel="stylesheet" href="css/master.css"/>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="maşın arenda toy maşını gəlin maşını"/>
+    <meta name="description" content="Gəlin maşını icarəsi">
+    <meta name="author" content="">
+
+    <!-- Title -->
+    <title>Lendock - Maşın icarəsi</title>
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- CSS -->
+    <link href="lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <link href="css/colors.css" type="text/css" rel="stylesheet"/>
+    <link href="css/font.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/jQuery.filer-master/css/jquery.filer.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/jQuery.filer-master/css/themes/jquery.filer-dragdropbox-theme.css" type="text/css"
+          rel="stylesheet"/>
+    <link href="lib/Magnific-Popup-master/magnific-popup.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/popup/css/component.css" type="text/css" rel="stylesheet"/>
+    <link href="lib/icon8/styles.min.css" type="text/css" rel="stylesheet"/>
+    <link type="text/css" rel="stylesheet" href="lib/jquerym.menu/css/jquery.mmenu.all.css"/>
+    <link href='css/mapbox.css' rel='stylesheet'/>
+    <link href='lib/chosen/chosen.css' rel='stylesheet'/>
+    <link href='../../api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css'
+          rel='stylesheet'/>
+    <link href='../../api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css'
+          rel='stylesheet'/>
+    <link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+    <link href="css/main.css" type="text/css" rel="stylesheet"/>
+    <link href="css/app.css" type="text/css" rel="stylesheet"/>
+
+    <!-- IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <!--script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script-->
+    <![endif]-->
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid padding0">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="menu-logo">
-                    <a href="index.html"><img class="" src="img/lendock-logo.png"></a>
-                </div>
-            </div>
+<div id="page">
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-
-                </ul>
-                <ul class="nav navbar-nav navbar-right no-margin-left">
-                    <li class="bar-section">
-                        <a class="padding0" href="#">
-                            <div class="bar-icon">
-                                <img src="img/borrow-icon.png">
-                            </div>
-                            <div class="navt">
-                                My Borrowings
-                            </div>
+    <!--==================================Header Open=================================-->
+    <header class="ld-header-bg">
+        <div class="ld-header-overlay"></div> <!-- ../header-overlay -->
+        <!-- Header transparent no login STARTS-->
+        <div class="ld-menu-bar ld-menu-bar-absolute">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-xs-6 ld-logo-container">
+                        <div class="ld-logo">
+                            <a href="index.html">
+                                <img src="images/logo-white.png" alt="lendock rent car" height="40px"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 mobile-nav-icon">
+                        <a href="#menu" class="nav-icon">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
                         </a>
-                    </li>
-                    <li id="messagesDown" class="bar-section dropdown">
-                        <a id="dLabel" href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
-                           data-target="#" aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="bar-icon">
-                                <span class="badge-bar">8</span>
-                                <img src="img/messages.png">
-                            </div>
-                            <div class="navt">
-                                Notifications<span class="caret"></span>
-                            </div>
-                        </a>
-                        <ul id="notificationTabs" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                            <ul class="nav nav-tabs">
-                                <li class="notification-tab"><a href="inbox.html">Messages <span class="badge-message">4</span></a></li>
-                                <li class="notification-tab"><a href="alerts.html">Alerts <span class="badge">4</span></a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="messages" class="tab-pane fade in active">
-                                    <ul class="padding0 ul-scroll">
-                                        <a href="#">
-                                            <li class="notification-message newMessage">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/ramiz.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Ramiz sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/magnifier.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Magnifier sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/questions1.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img src="img/questions1.png"
-                                                                               style="height: 45px; width:45px;"
-                                                                               class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Question sent you a message</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </div>
-                                <div id="alert" class="tab-pane fade">
-                                    <ul class="padding0 ul-scroll">
-                                        <a href="#">
-                                            <li class="notification-message newAlert">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
-                                                            style="height: 45px; width:45px;" class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Agahuseyn sent you request</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message requestDeclined">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-320-876x535.jpg"
-                                                            style="height: 45px; width:45px;" class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Javad declined request</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                        <a href="#">
-                                            <li class="notification-message requestAccepted">
-                                                <div class="row">
-                                                    <div class="col-xs-4"><img
-                                                            src="img/bmw/2015-BMW-M3-sedan-301-876x535.jpg"
-                                                            style="height: 45px; width:45px;" class="round-photo"></div>
-                                                    <div class="col-xs-8"><span class="notification-sender-name">Iskandar accepted request</span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </a>
-                                    </ul>
-                                </div>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="bar-section dropdown">
-                        <a href="#" class="dropdown-toggle padding0" data-toggle="dropdown" role="button"
-                           aria-haspopup="true"
-                           aria-expanded="false">
-                            <div class="bar-icon">
-                                <img src="img/user.png">
-                            </div>
-                            <div class="navt">
-                                Profile<span class="caret"></span>
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Wishlist</a></li>
-                            <li><a href="#">Dock</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li><a href="#">Profile</a></li>
-                            <li><a href="#">Settings</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Sign Out</a></li>
-                        </ul>
-                    </li>
-                    <li class="bar-section-green">
-                        <a class="padding0" href="#">
-                            <div class="bar-icon">
-                                <img src="img/add_item.png">
-                            </div>
-                            <div class="navtw">
-                                Add Car
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-</header>
-<section>
-    <div class="fullWidth">
-        <div class="cover-photo"></div>
-    </div>
-</section>
-<section class="quick-serch">
-    <div class="container-fluid">
-
-    </div>
-</section>
-<section class="b-search">
-    <div class="container">
-        <form method="POST" class="b-search__main">
-            <div class="b-search__main-title">
-                <h2>WHICH VEHICLE YOU ARE LOOKING FOR? FIND IT HERE</h2>
-            </div>
-            <div class="row">
-                <div class="b-search__main-type">
-                    <div class="col-xs-12 col-md-2 col-md-offset-1 s-noLeftPadding">
-                        <p>Start date</p>
                     </div>
-                    <div class="col-xs-12 col-md-2 s-noLeftPadding">
-                        <input type="text" class="span2 no-bottom-margin" value="" id="dpd2">
-                    </div>
-                    <div class="col-xs-12 col-md-2 s-noLeftPadding">
-                        <p>Drop off date</p>
-                    </div>
-                    <div class="col-xs-12 col-md-2 s-noLeftPadding">
-                        <input type="text"/>
-                    </div>
-                    <div class="col-xs-12 col-md-2 s-noLeftPadding">
-                        <input type="submit" class="button-submit"/>
-                    </div>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="container">
-        <div class="row" style="text-align: center">
-            <div class="col-xs-12">
-                <div class="b-search__main-title margin-top-45 center-block">
-                    <h3>QUICKLY SEARCH FOR SUITABLE VEHICLE</h3>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a href="#">
-                    <div class="quick-card-wedding margin-bottom-20">
-                        <div class="dark-overlay">
-                            <span class="card-text">Wedding Cars</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a href="#">
-                    <div class="quick-card-business margin-bottom-20">
-                        <div class="dark-overlay">
-                            <span class="card-text">Business Cars</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-4">
-                <a href="#">
-                    <div class="quick-card-bus margin-bottom-20">
-                        <div class="dark-overlay">
-                            <span class="card-text">Bus</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-</section><!--b-search-->
-<section><!---quick search-->
-    <div class="container">
-        <h2>Popular on Lendock</h2>
-        <div class="row">
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="item-box">
-                    <a href="#">
-                        <div class="image-box" style="background-image: url(img/bmw1.jpg)">
-                            <div class="item-price">
-                                $120/per day
-                            </div>
-                        </div>
-                    </a>
-                    <div class="title-box">
-                        <span class="item-title">
-                            Mercedes S Class 2015 qwerty A A A A
-                        </span>
-                        <span class="wishlist-button">
-                            <button type="button" class="no-border">
-                                <img src="img/favorite21.png">
-                            </button>
-                        </span>
-                    </div>
-                    <div class="item-specs">
-                        <div class="specs-icon">
-                            <img src="img/silhouette42.png">
-                            <span class="specs-detail">4 seats</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/stacked9.png">
-                            <span class="specs-detail">Sedan</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/fuel19.png">
-                            <span class="specs-detail">Benzine</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/driving2.png">
-                            <span class="specs-detail">Tiptronic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="item-box">
-                    <a href="#">
-                        <div class="image-box" style="background-image: url(img/bmw1.jpg)">
-                            <div class="item-price">
-                                $120/per day
-                            </div>
-                        </div>
-                    </a>
-                    <div class="title-box">
-                        <span class="item-title">
-                            Mercedes S Class 2015 qwerty A A A A
-                        </span>
-                        <span class="wishlist-button">
-                            <button type="button" class="no-border">
-                                <img src="img/favorite21.png">
-                            </button>
-                        </span>
-                    </div>
-                    <div class="item-specs">
-                        <div class="specs-icon">
-                            <img src="img/silhouette42.png">
-                            <span class="specs-detail">4 seats</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/stacked9.png">
-                            <span class="specs-detail">Sedan</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/fuel19.png">
-                            <span class="specs-detail">Benzine</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/driving2.png">
-                            <span class="specs-detail">Tiptronic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="item-box">
-                    <a href="#">
-                        <div class="image-box" style="background-image: url(img/bmw1.jpg)">
-                            <div class="item-price">
-                                $120/per day
-                            </div>
-                        </div>
-                    </a>
-                    <div class="title-box">
-                        <span class="item-title">
-                            Mercedes S Class 2015 qwerty A A A A
-                        </span>
-                        <span class="wishlist-button">
-                            <button type="button" class="no-border">
-                                <img src="img/favorite21.png">
-                            </button>
-                        </span>
-                    </div>
-                    <div class="item-specs">
-                        <div class="specs-icon">
-                            <img src="img/silhouette42.png">
-                            <span class="specs-detail">4 seats</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/stacked9.png">
-                            <span class="specs-detail">Sedan</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/fuel19.png">
-                            <span class="specs-detail">Benzine</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/driving2.png">
-                            <span class="specs-detail">Tiptronic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="item-box">
-                    <a href="#">
-                        <div class="image-box" style="background-image: url(img/bmw1.jpg)">
-                            <div class="item-price">
-                                $120/per day
-                            </div>
-                        </div>
-                    </a>
-                    <div class="title-box">
-                        <span class="item-title">
-                            Mercedes S Class 2015 qwerty A A A A
-                        </span>
-                        <span class="wishlist-button">
-                            <button type="button" class="no-border">
-                                <img src="img/favorite21.png">
-                            </button>
-                        </span>
-                    </div>
-                    <div class="item-specs">
-                        <div class="specs-icon">
-                            <img src="img/silhouette42.png">
-                            <span class="specs-detail">4 seats</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/stacked9.png">
-                            <span class="specs-detail">Sedan</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/fuel19.png">
-                            <span class="specs-detail">Benzine</span>
-                        </div>
-                        <div class="specs-icon">
-                            <img src="img/driving2.png">
-                            <span class="specs-detail">Tiptronic</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><!---quick search ends-->
-
-<footer class="b-footer">
-    <a id="to-top" href="#this-is-top"><i class="fa fa-chevron-up"></i></a>
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-4">
-                <div class="b-footer__company wow fadeInLeft" data-wow-delay="0.3s">
-                    <div class="b-nav__logo">
-                        <a href="home.html"><img class="footer-logo" src="img/LendockText.png" </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-8">
-                <div class="b-footer__content wow fadeInRight" data-wow-delay="0.3s">
-                    <div class="b-footer__content-social">
-                        <a href="#"><span class="fa fa-facebook-square"></span></a>
-                        <a href="#"><span class="fa fa-twitter-square"></span></a>
-                        <a href="#"><span class="fa fa-google-plus-square"></span></a>
-                        <a href="#"><span class="fa fa-instagram"></span></a>
-                        <a href="#"><span class="fa fa-youtube-square"></span></a>
-                        <a href="#"><span class="fa fa-skype"></span></a>
-                    </div>
-                    <nav class="b-footer__content-nav">
+                    <div id="menu"><!--mobile menu -->
                         <ul>
+                            <li>
+                                <a href="#">Yardım</a>
+                                <ul class="sub-menu">
+                                    <li><a href="pricing.html">FAQ</a></li>
+                                    <li><a href="404.html">Haqqımızda</a></li>
+                                    <li><a href="404.html">Sual ver</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 col-xs-12 ld-menu-container">
+                        <div class="pull-right ld-add-listing-btn">
+                            <ul>
+                                <li><a class="md-trigger" data-modal="modal-3"><i class="fa fa-sign-in"
+                                                                                  aria-hidden="true"></i> Giriş et</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pull-right ld-add-listing-btn">
+                            <ul>
+                                <li><a class="md-trigger" data-modal="modal-3"><i class="fa fa-user-plus"
+                                                                                  aria-hidden="true"></i> Qeydiyyat</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="ld-menu pull-right menu">
+                            <ul>
+                                <li><a href="#">Yardım <i class="icons8-angle-down drop-down-icon"></i></a>
+                                    <ul class="sub-menu">
+                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="#">Haqqımızda</a></li>
+                                        <li><a href="#">Sual ver</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header transparent no login ENDS-->
+        <!-- Login Popup -->
+        <div class="md-modal md-effect-3" id="modal-3">
+            <div class="login-form-popup ld-border-radius-8">
+                <div class="siginincontainer">
+                    <h1 class="text-center">Giriş et</h1>
+                    <form class="form-horizontal margin-top-30"  method="post">
+                        <div class="form-group">
+                            <label for="siusername">Email ünvan *</label>
+                            <input type="text" class="form-control" id="siusername" />
+                        </div>
+                        <div class="form-group">
+                            <label for="sipassword">Şifrə *</label>
+                            <input type="password" class="form-control" id="sipassword" />
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox pad-bottom-10">
+                                <input id="check1" type="checkbox" name="price-on-call" value="price-on-call">
+                                <label for="check1">yadda saxla</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Giriş" class="ld-secondary-btn width-full btn-first-hover" />
+                        </div>
+                    </form>
+                    <div class="pop-form-bottom">
+                        <div class="bottom-links">
+                            <a  class="signUpClick">Üzv deyilsiz? Qeydiyyatdan keçin</a>
+                            <a  class="forgetPasswordClick pull-right" >Şifrəni unutmusuz?</a>
+                        </div>
+                        <p class="margin-top-15">Sürətli giriş</p>
+                        <ul class="social-login list-style-none">
+                            <li><button class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
+                            <li><button class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
+                        </ul>
+                    </div>
+                    <a class="md-close"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="siginupcontainer">
+                    <h1 class="text-center">Qeydiyyat</h1>
+                    <form class="form-horizontal margin-top-30"  method="post">
+                        <div class="form-group">
+                            <label for="fullname">Ad Soyad *</label>
+                            <input type="text" class="form-control" id="fullname" />
+                        </div>
+                        <div class="form-group">
+                            <label for="supassword">Email ünvan *</label>
+                            <input type="email" class="form-control" id="supassword" />
+                        </div>
+                        <div class="form-group">
+                            <label for="singuppassword">Şifrə *</label>
+                            <input type="password" class="form-control" id="singuppassword" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Qeydiyyat" class="ld-secondary-btn width-full btn-first-hover" />
+                        </div>
+                    </form>
+                    <div class="pop-form-bottom">
+                        <div class="bottom-links">
+                            <a class="signInClick" >Qeydiyyatdan keçmisiniz? Giriş edin</a>
+                            <a class="forgetPasswordClick pull-right" >Şifrəni unutmusuz?</a>
+                        </div>
+                        <p class="margin-top-15">Sürətli qeydiyyat</p>
+                        <ul class="social-login list-style-none">
+                            <li><button  class="google flaticon-googleplus" ><i class="fa fa-google-plus"></i><span>Google</span></button></li>
+                            <li><button  class="facebook flaticon-facebook" ><i class="fa fa-facebook"></i><span>Facebook</span></button></li>
+                        </ul>
+                    </div>
+                    <a class="md-close"><i class="fa fa-close"></i></a>
+                </div>
+                <div class="forgetpasswordcontainer">
+                    <h1 class="text-center">Şifrə bərpası</h1>
+                    <form class="form-horizontal margin-top-30"  method="post">
+                        <div class="form-group">
+                            <label for="fpassword">Email ünvan *</label>
+                            <input type="email" class="form-control" id="fpassword" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Şifrəni yenilə" class="ld-secondary-btn width-full btn-first-hover" />
+                        </div>
+                    </form>
+                    <div class="pop-form-bottom">
+                        <div class="bottom-links">
+                            <a class="cancelClick" >Ləğv etmək</a>
+                        </div>
+                    </div>
+                    <a class="md-close"><i class="fa fa-close"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- ../Login Popup -->
+
+        <!-- Popup Open -->
+        <div class="md-modal md-effect-3" id="modal-2">
+            <div class="container">
+                <div class="md-content ">
+                    <div class="row popup-inner-left-padding ">
+                        <div class="col-md-6 ld-insert-data">
+                        </div>
+                        <div class="col-md-6">
+                            <div id="quickmap" class="quickmap"></div>
+                            <a class="md-close widget-map-click"><i class="fa fa-close"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Popup Close -->
+        <div class="md-overlay"></div> <!-- Overlay for Popup -->
+
+        <div class="ld-home-banner-contianer">
+            <div class="ld-home-banner-contianer-inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <p class="ld-banner-browse-txt">Uyğun nəqliyyat vasitəsini</p>
+                            <h1>İcarə et</h1>
+                        </div>
+                        <div class="col-md-8 col-xs-12 col-md-offset-2 col-sm-offset-0">
+                            <div class="ld-search-bar">
+                                <form method="post" action="">
+                                    <div class="ld-search-bar-left">
+                                        <div class="ui-widget border-dropdown">
+                                            <select class="comboboxs">
+                                                <option value="">Select one...</option>
+                                                <option value="All Locations">All Locations</option>
+                                                <option value="London">London</option>
+                                                <option value="Birmingham">Birmingham</option>
+                                                <option value="Bristol">Bristol</option>
+                                                <option value="Manchester">Manchester</option>
+                                                <option value="Newcastle">Newcastle</option>
+                                                <option value="Glasgow">Glasgow</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" placeholder="What is your Interest?" name="keywords"
+                                               class="ld-search-input ld-home-search-input"/>
+                                    </div>
+                                    <div class="ld-search-bar-right">
+                                        <input type="submit" value="Search" class="ld-search-btn"/>
+                                        <i class="icons8-search ld-search-icon"></i>
+                                    </div>
+                                    <div class="clearfix"></div> <!-- ../clearfix -->
+
+                                </form>
+                            </div><!-- ../search-bar -->
+                            <div class="text-center ld-search-description">
+                                <p>və ya<br>sürətli axtar</p>
+                                <img src="images/banner/banner-arrow.png" alt="banner-arrow" class="banner-arrow"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ../Home Search Container -->
+    </header>
+    <!--==================================Header Close=================================-->
+
+    <!--==================================Section Open=================================-->
+    <section>
+        <div class="ld-section-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="ld-home-categoires margin-top-subtract-55 padding-left-0">
+                            <li>
+                                <a href="listing.html" class="ld-border-radius-5">
+									<span>
+									<img class="icon icons8-Food"
+                                         src="images/icons/wedding-car.png" alt="gəlin maşını gelin mashini"/><br>
+										Gəlin maşını
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="listing.html" class="ld-border-radius-5">
+									<span>
+										<!-- Bar icon by Icons8 -->
+										<img class="icon icons8-Bar"
+                                             src="images/icons/economy.png" alt="ekonom arenda mashin"/><br>
+                                        Ekonom maşın
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="listing.html" class="ld-border-radius-5">
+									<span>
+										<!-- Movie icon by Icons8 -->
+										<img class="icon icons8-Movie"
+                                             src="images/icons/business.png" alt="biznes mashin"/><br>
+										Biznes klass
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="listing.html" class="ld-border-radius-5">
+									<span>
+										<!-- Shopping Bag icon by Icons8 -->
+										<img class="icon icons8-Shopping-Bag"
+                                             src="images/icons/bus.png" alt="avtobus arendasi"/><br>
+										Avtobus
+									</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="listing.html" class="ld-border-radius-5">
+									<span>
+										<!-- Shopping Bag icon by Icons8 -->
+										<img class="icon icons8-Shopping-Bag"
+                                             src="images/icons/truck.png" alt="dashinma"/><br>
+                                        Yük daşıma
+									</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div><!-- ../section-row -->
+
+        <div class="ld-section-row ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ld-section-title-container text-center ">
+                            <h1>Explore Your Nearby</h1>
+                            <div class="ld-sub-title">find your interests and check whats going on in the city now.
+                            </div>
+                        </div><!-- ../section-title-->
+                        <div class="ld-section-content-container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6  col-xs-12">
+                                    <div class="city-girds ld-border-radius-8">
+                                        <div class="city-thumb">
+                                            <img src="images/city/london.png" alt="london"/>
+                                        </div>
+                                        <div class="city-title text-center">
+                                            <h3 class="ld-h3">
+                                                <a href="listing-sidebar.html">London</a>
+                                            </h3>
+                                            <label class="ld-listing-quantity">15 Listings</label>
+                                        </div>
+                                        <a href="listing-sidebar.html" class="overlay-link"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="city-girds ld-border-radius-8">
+                                        <div class="city-thumb">
+                                            <img src="images/city/newcastle.png" alt="newcastle"/>
+                                        </div>
+                                        <div class="city-title text-center">
+                                            <h3 class="ld-h3">
+                                                <a href="listing-sidebar.html">Newcastle</a>
+                                            </h3>
+                                            <label class="ld-listing-quantity">28 Listings</label>
+                                        </div>
+                                        <a href="listing-sidebar.html" class="overlay-link"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <div class="city-girds ld-border-radius-8">
+                                        <div class="city-thumb">
+                                            <img src="images/city/manchester.png" alt="manchester"/>
+                                        </div>
+                                        <div class="city-title text-center">
+                                            <h3 class="ld-h3">
+                                                <a href="listing-sidebar.html">Manchester</a>
+                                            </h3>
+                                            <label class="ld-listing-quantity">08 Listings</label>
+                                        </div>
+                                        <a href="listing-sidebar.html" class="overlay-link"></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-3 col-xs-12">
+                                    <div class="city-girds ld-border-radius-8">
+                                        <div class="city-thumb">
+                                            <img src="images/city/glasgow.png" alt="glasgow"/>
+                                        </div>
+                                        <div class="city-title text-center">
+                                            <h3 class="ld-h3">
+                                                <a href="listing-sidebar.html">Glasgow</a>
+                                            </h3>
+                                            <label class="ld-listing-quantity">68 Listings</label>
+                                        </div>
+                                        <a href="listing-sidebar.html" class="overlay-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- ../section-content-container-->
+                    </div>
+                </div>
+            </div>
+        </div><!-- ../section-row -->
+
+        <div class="ld-section-row aliceblue nearby-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ld-section-title-container text-center ">
+                            <h1>Find your Best </h1>
+                            <div class="ld-sub-title">find your interests and check whats going on in the city now.
+                            </div>
+                        </div><!-- ../section-title-->
+                        <div class="ld-section-content-container">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <div class="nearby-banner">
+                                        <img src="images/nearby.png" alt="nearby"/>
+                                    </div>
+                                    <div class="nearby-description">
+                                        <p>
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusa ntium
+                                            dolore mque<br> laud antium, totam rem aperiam, eaque ipsa quae ab illo
+                                            inventore veritatis et quasi <br>
+                                            arc hitecto beatae vitae dicta sunt explicabo.
+
+                                        </p>
+                                    </div>
+                                    <ul class="nearby-download">
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/apple-icon.png" alt="apple-icon"/>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="images/google-play-icon.png" alt="google-play-icon"/>
+                                            </a>
+                                        </li>
+                                    </ul><!--../nearby-download-->
+                                </div>
+                            </div>
+                        </div><!-- ../section-content-container-->
+                    </div>
+                </div>
+            </div>
+        </div><!-- ../section-row -->
+
+        <div class="ld-section-row exculsive-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ld-section-title-container text-center ">
+                            <h1>Exclusive</h1>
+                            <div class="ld-sub-title">popular exclusive listings in our directory</div>
+                        </div><!-- ../section-title-->
+                    </div>
+                </div>
+                <div class="ld-section-content-container ld-list-grid-section">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 ld-grid-box-contianer ld-grid-box-contianer1"
+                             data-title="The Dorchester grill" data-reviews="4" data-number="+007-123-4567-89"
+                             data-email="jhonruss@example.com" data-website="www.example.com" data-price="$200"
+                             data-pricetext="Text about your price"
+                             data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum"
+                             data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel"
+                             data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com"
+                             data-linkedin="www.linkedin.com" data-instagram="www.instagram.com"
+                             data-twitter="www.twitter.com" data-lattitue="40.6700" data-longitute="-73.9400"
+                             data-posturl="post-detail.html" data-authorurl="author.html">
+                            <div class="ld-grid-box ld-border ld-border-radius-8">
+                                <div class="ld-grid-box-thumb-container">
+                                    <div class="ld-grid-box-thumb">
+                                        <img src="images/grid/grid-1.png" alt="grid-1"/>
+                                    </div><!-- ../grid-box-thumb -->
+                                    <div class="ld-grid-box-quick">
+                                        <ul class="ld-post-quick-links">
+                                            <li>
+                                                <a class="icon-quick-eye md-trigger" data-modal="modal-2"><i
+                                                        class="fa fa-eye"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div><!-- ../grid-box-quick-->
+                                </div>
+                                <div class="ld-grid-box-description ">
+                                    <h4 class="ld-h4">
+                                        <a href="post-detail.html">
+                                            The Dorchester grill
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>Brighton, The City of Brighton</span>
+                                    </p>
+                                    <ul class="ld-grid-box-price">
+                                        <li class="category-cion"><a href="listing.html">
+                                            <!-- Food icon by Icons8 -->
+                                            <img class="icon icons8-Food"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADaklEQVRoQ+1aQVbbMBD9013YlJ6gUS9AOAHKCZoscRZNT0B6AuAENSdoukhYAiewOQHhAlU4QWEDu07fKLZxDI4jm5S2T14ltjTSn5k/kr5NemKuiNDBK1wMnMeB6ueHlvnI/3igdl3uU3dq+BUwZENGgaL8+Ol8XO9nQIodNw2u7oTLAHogTSPmI1LCKZ9aPrUSD3iOeI40JUNJf59aPrV8aq32wAqOzKRnFKilo0V3asru2937X7eyuyZA6hAPxNVzxfZlqeVq9zEikx9zEL1ngor31dzVUJ32+tS0iWHAfBMNPrTr2Ej75FMrBrDHhG68r+T3xi99ajQxIgCXUaB03QFzdq5JT01IwAEzjuOBOqpr1KWfnpgjIhwycBIHauTSd0mQmJqIAC1zFyA9As6aesdlMqlyw0A/DtS5S9+0rZ6YIRG+AXzHLWqTPjPb9MBzgN7+CZ5k/EgmEPfVrQuQ7tTsMTAioGdBEPWEElaKyYX6exyooYth17Z6asYEfHJNZZ2kUTYe8w2DevFA2YVyAcRWEZ4lUdkY6R/JaT3ZcamSaXVixgVE2Buocd6JmTimp0bC9ZWBOVrYdQ15VWQkhfGAKwLaDHyJAxVW9ck/r1p3iirfohQzZthC96XAWBD3iBJptlbJdQKyID4EzA4DMVroNwVTAHHNLeg6Np2AWL4sg5mD0U8J5ZIKSRHpgHAm6QSgNgix5QwkBYN7jInwUf4zY4w3OF6XnFI88AuHRLAV0BJ0C8M6kShuRco06iWOFD2+WHQ4lGqWTEhKnYC6KIJKJi/AZaFKzhJ8x0yjYoVxjWztiCxtAxZEHRF4KJvLBNBtPFDvltpNzE8ibNt7ixo/xhbCJlGoXbWqPKUnpkME+yKmTN5nxm5dTq0avxZH6hisGqjKSVXPq+yv5Mhzxl31qKoJrvvcAynzlI/IujlU0s6nlk+tgsjcMKOy7j61/uvUym1RrktE5p1/YouSCQfP6FGZPgZsRMB4MY7oiTkgQphIME+EgyUBgyFb95OXInqjbXxyUpRUkVOeCBNWo2XG57LzxaNoBlgRgxESYRYF6rIpKOeIlH6/JWcMolGVMmiVS+YwPbvkAYioUfwOa12AzkCSN0M7yQCX1rOLD8ScpE0BBEDkWInkXmLvSZFwAPLsG6u0/288R19KOGbU8gAAAABJRU5ErkJggg=="
+                                                 alt="restaurents"></a></li>
+                                        <li><span>$200.00</span></li>
+                                    </ul>
+                                </div><!-- ../grid-box-description-->
+                                <div class="ld-grid-box-bottom">
+                                    <div class="pull-left">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span class="rating-ratio">4.0</span>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="ld-add-to-fav simptip-position-top simptip-movable"
+                                           data-tooltip="Add to favorites">
+                                            <i></i>
+                                        </a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- ../grid-box-bottom-->
+                            </div><!-- ../grid-box -->
+                        </div>
+                        <div class="col-md-3 col-sm-6 ld-grid-box-contianer" data-title="3 Bed Detached House"
+                             data-reviews="5" data-number="+001-587-4567-89" data-email="russel@example.com"
+                             data-website="www.example.com" data-price="$50,000" data-pricetext="Text about your price"
+                             data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum"
+                             data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel"
+                             data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com"
+                             data-linkedin="www.linkedin.com" data-instagram="www.instagram.com"
+                             data-twitter="www.twitter.com" data-lattitue="51.516576" data-longitute="-0.137508"
+                             data-posturl="post-detail.html" data-authorurl="author.html">
+                            <div class="ld-grid-box ld-border ld-border-radius-8">
+                                <div class="ld-grid-box-thumb-container">
+                                    <div class="ld-grid-box-thumb">
+                                        <img src="images/grid/grid-2.png" alt="grid-2"/>
+                                    </div><!-- ../grid-box-thumb -->
+                                    <div class="ld-grid-box-quick">
+                                        <ul class="ld-post-quick-links">
+                                            <li>
+                                                <a class="icon-quick-eye md-trigger" data-modal="modal-2"><i
+                                                        class="fa fa-eye"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div><!-- ../grid-box-quick-->
+                                </div>
+                                <div class="ld-grid-box-description ">
+                                    <h4 class="ld-h4">
+                                        <a href="post-detail.html">
+                                            3 Bed Detached House
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>Newcastle, Tyne and Wear</span>
+                                    </p>
+                                    <ul class="ld-grid-box-price">
+                                        <li class="category-cion"><a href="listing.html">
+                                            <!-- Home icon by Icons8 -->
+                                            <img class="icon icons8-Home"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACVElEQVRoQ+3YvXnbMBAG4O9Ku4kyAiaIvAG4QVJGKiJvYE+SbGClEFtlA2EDyxNghNhNVCIPIEKmGJIHKgDFAu5s0gTeOxz+CAl/5FbPcMAWBjPcolBfxGuq5ijVhx3iD3ZEmNs2jME+JSYdZKOfjwjzdgwWfbAYtRR3KYKXBCI3+okIK4swhqRjkFEVZq2W4j42JjqkiVBLsbedlhs9T4mJCulC+OhzmKLUpi1Tu4Vg+8m+EDoEOEQI5uqQUASH8RCfgebvfUH974y8I9wUe+drgsvkcZjhuZqa3QQgS70m4NvoEFnqBwK+V525V0ux5gD153KjV0R4cv8PPKqF+GExaiFW9m+jZOSsEwaDEbVh9o5pfCc5JBaCwySFxEb0YZo1E63YUyH6MEWp1W4h3O4gCiQ1oguDW/wK2TUHTb+y1J8J2Fazy08/q3BRuvS5H1KuPUKhvgrFfYuF2PkecNvxmQGSI06ZqdYUY2DPMAW3PvVCroW4BNMJuTZiKKYVMhXEEMw/kKkhQjFnkDrCfiDkHMDNJjGf+5W+bQI4QZqXBVOGVJvUs8sMB2kgXgB8mjjE9bF+M0NNhLmBpAN+TxlibvCRDrCL5AlD8nRtgxeLsNuBIbvOmDXAfaveL5uAOoaq7cDcI4YeaLjGYz5vBthjDLBvXUcuyUjXxQEHGTIz9vUrQ5qRHprFoe9zQz56RkKHSoZ07DhyRnKNVBHINZJrhFuaLxwqeWjloZWHVn8Eco3kGsk1kmukMwKjHnUnebAKLI/RX2sLVu/BavQeBjbYBvkLODEBNn2o34UAAAAASUVORK5CYII="
+                                                 alt="realestate">
+                                        </a></li>
+                                        <li><span>$50,000</span></li>
+                                    </ul>
+                                </div><!-- ../grid-box-description-->
+                                <div class="ld-grid-box-bottom">
+                                    <div class="pull-left">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span class="rating-ratio">3.0</span>
+                                    </div>
+                                    <div class="pull-right">
+										<span class=" simptip-position-top simptip-movable"
+                                              data-tooltip="Marked as hot">
+										<i class="fa fa-fire hot-post" title=""></i>
+										</span>
+                                        <a href="#" class="ld-add-to-fav simptip-position-top simptip-movable"
+                                           data-tooltip="Add to favorites">
+                                            <i></i>
+                                        </a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- ../grid-box-bottom-->
+                            </div><!-- ../grid-box -->
+                        </div>
+                        <div class="col-md-3 col-sm-6 ld-grid-box-contianer" data-title="3 Bed Detached House"
+                             data-reviews="5" data-number="+001-587-4567-89" data-email="russel@example.com"
+                             data-website="www.example.com" data-price="$50,000" data-pricetext="Text about your price"
+                             data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum"
+                             data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel"
+                             data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com"
+                             data-linkedin="www.linkedin.com" data-instagram="www.instagram.com"
+                             data-twitter="www.twitter.com" data-lattitue="51.516576" data-longitute="-0.137508"
+                             data-posturl="post-detail.html" data-authorurl="author.html">
+                            <div class="ld-grid-box ld-border ld-border-radius-8">
+                                <div class="ld-grid-box-thumb-container">
+                                    <div class="ld-grid-box-thumb">
+                                        <img src="images/grid/grid-3.png" alt="grid-3"/>
+                                    </div><!-- ../grid-box-thumb -->
+                                    <div class="ld-grid-box-quick">
+                                        <ul class="ld-post-quick-links">
+                                            <li>
+                                                <a class="icon-quick-eye md-trigger" data-modal="modal-2"><i
+                                                        class="fa fa-eye"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div><!-- ../grid-box-quick-->
+                                </div>
+                                <div class="ld-grid-box-description ">
+                                    <h4 class="ld-h4">
+                                        <a href="post-detail.html">
+                                            Photography
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>Brighton, The City of Brighton</span>
+                                    </p>
+                                    <ul class="ld-grid-box-price">
+                                        <li class="category-cion"><a href="listing.html">
+                                            <!-- Camera icon by Icons8 -->
+                                            <img class="icon icons8-Camera"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEXUlEQVRoQ+1ZTVrbSBB9xWrMJswJQs8FhpwgrRPELCMvQk4QcwIyJ4g5AWRhZYlyAjcnIFxgmpxgzCbJipqv2mohbP20bIn444MlVv+8rupXr14TnsgfPREceAaybZHsJSL6wu7hFz7gDkMiHLQBzYxv2EGKP3BqDtU8dGznQByIH5i1BbC8YQdoF1EomO6BJHZCwAeAb5loaN4qE3qq8p3+YjUxpwC9YODUxGocMr4UiE7sjABdNQEDqYnV4fLv+ovdJ4aV/zPjlRmpbyGbWJlnag+IcOXmISjzVt00zVMKJEosNw2cxWplrJ7aj0Q4YeCzidVR0xx1v+vEnhPwjhn/mJH62DTX6mYS+46AcxlYttkQkAwcmlilTYs3ABkScFF6d0rIIAeip/YAhAsC9rPB17NYrTBOlFjJ+dc1mygdtw6oKLGSmn+XjWXGHIT3/sAcEAcCjmn2mPEVhPNNT3SdjYeMETLAHcZEeOPuUBZ9cnT5E1cSidB8DFmw72/01B4R4cxFZheK/AUFcDmLVSVTbbIxYTPc4Q0IQzD2fI1xtYIwByPFDr6GsFNxH3pqU4mMBIB8zhcvqAsf48wNkjxsWQv8Ytk8J3VUXtwYAwaM41DaXtQczORAJCL/ubsxwJ++iurEWn/pGbgxsVJtI6IT+4mArJjxLYOExVIwbvxGM4IRchkSeChFMMv7iYnVcciankUlIq5mFKk2Sv6d+0nB/H02+sszWePc2Z0T9tOuujNNsItJk9TIpM2YiMdZVTcY4LBpXC0QF7I7drWEd+ioTWrdqwIHQoemSZ6Orqqz8WBMrKK606sF0njsFR/oos4a0H7TaVatI9Ghn3wTorc6B+IvXpZOrSOxDEruTx6ZGt3WPZBMaHZZiwrazVSlWKdA7lUv3/IGKbUSlWKKVajgboEkdkzApy5U7woYr4KBYxOryfLvnQIpK6rrEkYJEK+CS5VHp0D01F6J7NikmapksKzJkuptRupV3xFZKapdRUTmKSvafv5OI1K3UBeAHhOIa4D6TC0AVY2ey4ZSrdX2FJ/OZX8q9OsLou/W1tVYZQURP2Bdm/EYBTFjFmdK9CFR6rrXTllLgCxEHq5cVICorXwvE40FQ6TS7OsciAOTyfhNUyxrshYp1WCb9gJkKcXWikzRmgoxRHoDsmiKIP253Jc5djAJeSIoPEWIZ7UnIHiAYRNx9AYkb1nzbtEZ2hKdlICUge9F84GAlwwMnQGxACCmW7AL3zuQAgGI9K6zWIv3/JIZ4zZEUQSykBeEqI3J0Kb6O4OOxfJxJy+n7v3cawBzeaYAIW1t0GW+lsiX3GmsevNos+HH/tY7Ns5pfOBYMN6bkXI20Lb/ee/XmR0D2l+48YnN3yIkMgRMZrG63EYwUWJfMyCttaTpvRtfYBmxLc9zh3EbUTzYk7Nhjx68j+RgFi+ywuOCtvSBZQvwXbO490s2bOevur8L6DOQ33XyVes+R+Q5Ij2dwP9TYAKAKNjkVAAAAABJRU5ErkJggg=="
+                                                 alt="camera">
+                                        </a></li>
+                                        <li class="category-cion"><a href="listing.html">
+                                            <!-- Camera icon by Icons8 -->
+                                            <img class="icon icons8-Camera"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAGm0lEQVRoge2ZPWgcRxSAX6EQFSpMosIBFypcCONCwSoUSMibkSFyMMQQFyKYoAQVKgxRwBAbXAgcMEaFQhwQwcUFbueNciIRRBAldnEQFy4ccEAIRUi7b4QCSlBAhQoVKi7FzNzunfb2fqVzkQcLt3d7M++beX/zFgTxiiAuvQyX1GYRWpVuK199tQ3S8gAdkv9Bag1wmj6T9ImTAOmKT5wYSMsDtjkvFvhsRwes9z8sFntQ8YTUnBPELIj3BZknGPBIO/O6a18QF6U2D1FFNzHPiDk+cyIgkljXNBnNzzC/db5FkN0MU9yVmnOY496OgEht7rnn1jHPiIW1PtQ8gMTTgsyO++1FKyAAAEgb/ZhnROJpqXlekHkuyByUzU/zQEdABPG6HTAcrv4NC2t9flJc2LrYLAgW1vrSnscc99pnzBEWiz1tg1hFuSSID2sraZ4K4hLmGZsFSZhXUWqe96uPioccyGpTA9YHMXsZShYFcQkpfLt5kNiEBHFJEs85kHFBGfVYa6Zl9gRxqVYkcRHsqJaZ1JsXC3xWuMSMKroFACCJ7zuQ2Q6C2MiS5nSY4zOCzJEgc9AqCACA0PxMEJcwCK86kKXEru1IbRaReBoDHsEc9zZvWsHmOfcMpzodAAgyqzWjS6MgNpeUMNg8Z8HMZiLHVIVl87xV09qx287jx0ApmvSrlj1GhmlpHvBKA1QGGCwWezC/dR4VT8S7ZPZaAvGOl5Yr/MphEF1vGSQIrwqXWC1YOGzvzWbSXFHxhAsISy1n9rKfOBsGaHw36oKo6JZ1bJ5PKuxXH2mjHwDAJksXEFoFQRXddJPl4v+aJ87kJtoBcfVbCVV0096b2aRPeJCyLwY80gaI29YKEJc/VHi5HRBB/EIkEqrUZjkBwgA+Ojq/aSVqWYjwsq1/4oQFACCJ58oRLeCp1OKuMZDDypWPC0lJrAESfkTmad0BjwPwhHB1VllhNxlAOboUE7/vowpn0hJnrXmReNB93q1a+VKVud1zYPcbBrGD2/rJT4IquluzwFM87hNaGSgRFOqAXHOfV+zK80glCA+554v++YZAkDb6fUkiyOwgRTdqJcIUoCER9wAOkXiwAZDbSZPFgKcSEesAwB7qyhW23+16IN7upTbLWSVHlvgwKcnk64FIbRYtUDSZnN+BPAFI5BXidag3YOKebQTJPvFlid3V2O6z5o3LG3vWSfocqnDGjsfTbmEe1QU5rSsF5EhQfMCKzZpLSDwGAFDetWS+SjGlpZNWPmlGqQuozWbVTpaq4HYc2GBNkG5JBYiKCgAAQpn3492IfgMAuKzNm94/rvxcevXYAF3S/5ge1vajLwEAUPFnCZP7GgBAUviJi2o6dYAu6J6qh9uRjwEAhDLfJMztUwAASfyVM6vbqQN0QfdUPQRx6V0ybwEAIEWPY7jtSwAAQpcT4VjqAF3QPVUPQebf0R//ev3St7+/4kO/ILOKxWIPah4QivcF8d+Yq2qtnna4rXspe5gaDbYvxN9HAQCAUPyB++6XYyvhY/LLcvkuCRKPxRGLpwEAUIUzyWfqbLHvK5mn5Say7VRkN5E7IMk5/ClRkDs4QfzuplwoZomoLMOrr11BvCKJ55CiSdThcKv1Vz3xp0ThGg5WN1coJo4OmYLB5jkMwqu+KebKhsMMQJbaLEttZpGiG6h4KOtQ1Yj4g5s/OMUt00Sh2KjEduqqTuJBJL6GxLetb5lVXxvVuNYl8ZIkvo9BdB0Xti42egTwq+8PTr6cTx6tG5ZEm3Kx1nZisdiDC1sXMYiuowpn6gOaI0FmVWqziCqccQszWDFm3Ncq+4Mkk7f3trxvDkSbhxVKaLMpNecw4KmsVwYVgIrHJfF9V4yuZ+zeoSB+IYl17B/mwAcA4Y8TVdANCdJGvzOjZZHaquR9QbyCKrrrX/jUHTPHvah4qAIwbodWh+KHAOWmdkm4zmPbYk2Ip6TmXPrk5sit6hwqHvd924bGLqz1oQ6H7XtJMys15/yu+3O8JF7qCEi1jAbbF0QQfiSIHwjFvwrF/6Ss7B+C+Duh+PNRZcR7hZ3Xmp0HVeQbdHdOguOYvPODeUMumCuC+I6g6HtB/OcxMM3bSPwTquieIPNhI0doJH4siEtywVw5DY5aSgwiRZPOgWs4u1mVmudR8UQ1mH13aPNYu7mpo+ICyDWpzazrfaUkWrMniZdQRbd8j9l35l9awQKfReIx1PyFe3dfK0Q/6LauTQsSD9oXOeaRBTMHaa/Ck/IfJv3UcLA9GrgAAAAASUVORK5CYII="
+                                                 alt="camera">
+                                        </a></li>
+                                        <li><span>$20/h</span></li>
+                                    </ul>
+                                </div><!-- ../grid-box-description-->
+                                <div class="ld-grid-box-bottom">
+                                    <div class="pull-left">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span class="rating-ratio">3.0</span>
+                                    </div>
+                                    <div class="pull-right">
+										<span class=" simptip-position-top simptip-movable"
+                                              data-tooltip="Marked as hot">
+										<i class="fa fa-fire hot-post" title=""></i>
+										</span>
+                                        <a href="#" class="ld-add-to-fav simptip-position-top simptip-movable"
+                                           data-tooltip="Add to favorites">
+                                            <i></i>
+                                        </a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- ../grid-box-bottom-->
+                            </div><!-- ../grid-box -->
+                        </div>
+                        <div class="col-md-3 col-sm-6 ld-grid-box-contianer" data-title="Hotel Rammizine"
+                             data-reviews="5" data-number="+041-923-4367-89" data-email="jhonruss@example.com"
+                             data-website="www.example.com" data-price="$1500" data-pricetext="Text about your price"
+                             data-description="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi archeum"
+                             data-userimage="images/user-thumb-94x94.png" data-username="Jhon Russel"
+                             data-userlisting="14" data-fb="www.facebook.com" data-gplus="www.plus.google.com"
+                             data-linkedin="www.linkedin.com" data-instagram="www.instagram.com"
+                             data-twitter="www.twitter.com" data-lattitue="51.512306" data-longitute="-0.119221"
+                             data-posturl="post-detail.html" data-authorurl="author.html">
+                            <div class="ld-grid-box ld-border ld-border-radius-8">
+                                <div class="ld-grid-box-thumb-container">
+                                    <div class="ld-grid-box-thumb">
+                                        <img src="images/grid/grid-4.png" alt="grid-4"/>
+                                    </div><!-- ../grid-box-thumb -->
+                                    <div class="ld-grid-box-quick">
+                                        <ul class="ld-post-quick-links">
+                                            <li>
+                                                <a class="icon-quick-eye md-trigger" data-modal="modal-2"><i
+                                                        class="fa fa-eye"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div><!-- ../grid-box-quick-->
+                                </div>
+                                <div class="ld-grid-box-description ">
+                                    <h4 class="ld-h4">
+                                        <a href="post-detail.html">
+                                            Hotel Rammizine
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>Brighton, The City of Brighton</span>
+                                    </p>
+                                    <ul class="ld-grid-box-price">
+                                        <li class="category-cion"><a href="listing.html">
+                                            <!-- 5 Star Hotel icon by Icons8 -->
+                                            <img class="icon icons8-5-Star-Hotel"
+                                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACWUlEQVRoQ+1ZvXnbMBB95zKN5REwQZQJAk0QuwxZRJnAHsEj2BNYKciUsScQNrAzAUZI0qQ0/IEy80E0IQIgKOhTwE68H9w7HN7hKMLAw79LrlXEZyb6VFPL25hoEEgt1w2Qgi16gSSW7wTCKznHCT5BYU7AuVZWwD0IT3jGQ2OcUC5K9tRNqnVHeC1XBHwxDRTwTRRsqd+lljsD0YqLWmrk71+Nfq4LNjcdpJabsew8I7ySvwjqz6a06FSU7Mw0Ti13AsJ/yBn+4kqU7LoppUpe4x1uxAX73fxOLHcqreawA5cAzokwG2K2fciVgk7gPYBbp8POK7kkwt0+ggtdQyl8FSVbWUtL7wQRHl/p9hYKqz70oQGMsWuqhLCkTaVAKXwwY9s67C2lKr19Bbsas/BUtryWNxqM2Qr0WttANEsRZl20UwUV4retGn1mTBbdArKopdLO1wUbvLqEBBHLpi9OJyC8ko9E2GqGbVD66iIKdtHpL5PqBwNpDW0Z7e7gvvTNdZ12xFZyh/T+/wRyDKWlp8OPfUCUwoMoWTOztM+illPrv2FXp9KKRZux/ASzVqwAYvkJBpL7iGULYvWd3EdsmTyE906sta8rh2+fCimtqfuCr//cR2K1gCh+ch85psPeOwLneaTzTSBGQnIf+ffxIc8j4UwcTL/hS05jGQwkzyN5HtlkwIeWvej3EOYOG0AvIGPmBZcMj/HvCmT0vDAAZLR/JyC+JOpT276+R5WW72IZiGPGghuio3/z26/XtT+G/+M+I74ZSqW/63OQlQZTBWtbt/t3xgvz/SNvFqVEmwAAAABJRU5ErkJggg=="
+                                                 alt="hotels">
+                                        </a></li>
+                                        <li><span>Price on call</span></li>
+                                    </ul>
+                                </div><!-- ../grid-box-description-->
+                                <div class="ld-grid-box-bottom">
+                                    <div class="pull-left">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <span class="rating-ratio">5.0</span>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="#" class="ld-add-to-fav simptip-position-top simptip-movable"
+                                           data-tooltip="Add to favorites">
+                                            <i></i>
+                                        </a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div><!-- ../grid-box-bottom-->
+                            </div><!-- ../grid-box -->
+                        </div>
+                    </div>
+                </div><!-- ../section-content-container-->
+            </div>
+        </div><!-- ../section-row -->
+
+        <div class="ld-section-row aliceblue testimonial ld-section-content-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="video-thumb">
+                            <img src="images/video-img.jpg" class="ld-border-radius-5" alt="video-img"/>
+                            <a href="https://vimeo.com/45830194" class="overlay-video-thumb popup-vimeo">
+                                <i class="fa fa-play-circle-o"></i>
+                            </a>
+                        </div><!-- ../video-thumb -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="testimonial-inner-box">
+                            <h3 class="margin-top-0">People talking about us</h3>.
+                            <div class="testimonial-description ld-border-radius-5">
+                                <p>
+                                    “ We have exceeded our [goals for] how many people are going to our website, staying
+                                    on our website and also calling us… We’ve
+                                    always viewed our relationship with listingpro as an investment to keep us current
+                                    in our community and to keep us relevant and our brand out there.”
+                                </p>
+                            </div><!-- ../testimonial-description -->
+                            <div class="testimonial-user-info user-info">
+                                <div class="testimonial-user-thumb user-thumb">
+                                    <img src="images/user-thumb-60x60.png" alt="user-thumb"/>
+                                </div>
+                                <div class="testimonial-user-txt user-text">
+                                    <label class="testimonial-user-name user-name">Richard Jeans</label><br>
+                                    <label class="testimonial-user-position user-position">DX Media. Cortland,
+                                        OH</label>
+                                </div>
+                            </div><!-- ../testimonial-user-info -->
+                        </div><!-- ../testimonial-inner-box -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- ../section-row -->
+
+        <div class="ld-section-row  blog-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="ld-section-title-container text-center ">
+                            <h1>News & Tips</h1>
+                            <div class="ld-sub-title">checkout latest news and articles from our blog</div>
+                        </div><!-- ../section-title-->
+                        <div class="ld-section-content-container ld-blog-grid-container">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 ld-blog-grid-box">
+                                    <div class="ld-blog-grid-box-container ld-border ld-border-radius-8">
+                                        <div class="ld-blog-grid-box-thumb">
+                                            <img src="images/blog/blog-grid-1-410x308.jpg" alt="blog-grid-1-410x308"/>
+                                        </div>
+                                        <div class="ld-blog-grid-box-description text-center">
+                                            <div class="ld-blog-user-thumb margin-top-subtract-25">
+                                                <img src="images/blog/blog-user-thumb.png" alt="blog-user-thumb"/>
+                                            </div>
+                                            <div class="ld-blog-grid-category">
+                                                <a href="blog-archive.html">
+                                                    Tips & Tricks
+                                                </a>
+                                            </div>
+                                            <div class="ld-blog-grid-title">
+                                                <h4 class="ld-h4">
+                                                    <a href="blog-detail.html">There are many lorem epsum<br>
+                                                        variations of passage </a>
+                                                </h4>
+                                            </div>
+                                            <ul class="ld-blog-grid-author">
+                                                <li>
+                                                    <a href="author.html">
+                                                        <i class="fa fa-user"></i>
+                                                        <span>Admin</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-calendar"></i>
+                                                    <span>08 June</span>
+                                                </li>
+                                            </ul><!-- ../ld-blog-grid-author -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 ld-blog-grid-box">
+                                    <div class="ld-blog-grid-box-container ld-border ld-border-radius-8">
+                                        <div class="ld-blog-grid-box-thumb">
+                                            <img src="images/blog/blog-grid-2-410x308.jpg" alt="blog-grid-2-410x308"/>
+                                        </div>
+                                        <div class="ld-blog-grid-box-description text-center">
+                                            <div class="ld-blog-user-thumb margin-top-subtract-25">
+                                                <img src="images/blog/blog-user-thumb.png" alt="blog-user-thumb"/>
+                                            </div>
+                                            <div class="ld-blog-grid-category">
+                                                <a href="blog-archive.html">
+                                                    Coffee
+                                                </a>
+                                            </div>
+                                            <div class="ld-blog-grid-title">
+                                                <h4 class="ld-h4">
+                                                    <a href="blog-detail.html">Chemex coffee for two<br> people </a>
+                                                </h4>
+                                            </div>
+                                            <ul class="ld-blog-grid-author">
+                                                <li>
+                                                    <a href="author.html">
+                                                        <i class="fa fa-user"></i>
+                                                        <span>Admin</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-calendar"></i>
+                                                    <span>28 September</span>
+                                                </li>
+                                            </ul><!-- ../ld-blog-grid-author -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-4 ld-blog-grid-box">
+                                    <div class="ld-blog-grid-box-container ld-border ld-border-radius-8">
+                                        <div class="ld-blog-grid-box-thumb">
+                                            <img src="images/blog/blog-grid-3-410x308.jpg" alt="blog-grid-3-410x308"/>
+                                        </div>
+                                        <div class="ld-blog-grid-box-description text-center">
+                                            <div class="ld-blog-user-thumb margin-top-subtract-25">
+                                                <img src="images/blog/blog-user-thumb.png" alt="blog-user-thumb"/>
+                                            </div>
+                                            <div class="ld-blog-grid-category">
+                                                <a href="blog-archive.html">
+                                                    Restaurents
+                                                </a>
+                                            </div>
+                                            <div class="ld-blog-grid-title">
+                                                <h4 class="ld-h4">
+                                                    <a href="blog-detail.html">The 10 free restaurents in<br> your city
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <ul class="ld-blog-grid-author">
+                                                <li>
+                                                    <a href="author.html">
+                                                        <i class="fa fa-user"></i>
+                                                        <span>Admin</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <i class="fa fa-calendar"></i>
+                                                    <span>16 November</span>
+                                                </li>
+                                            </ul><!-- ../ld-blog-grid-author -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- ../section-content-container-->
+                    </div>
+                </div>
+            </div>
+        </div><!-- ../section-row -->
+    </section>
+    <!--==================================Section Close=================================-->
+
+    <!--==================================Footer Open=================================-->
+    <footer class="text-center">
+        <div class="footer-upper-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="footer-menu">
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Terms of Privacy & Policy</a></li>
-                            <li><a href="#">Legal</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a></li>
-                            <li><a href="#">Press</a></li>
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Contact</a></li>
+                            <li><a href="login.html">Login</a></li>
                         </ul>
-                    </nav>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 lendock-footer-copy">
-                &#169; Lendock
+        </div><!-- ../footer-upper-bar -->
+        <div class="footer-bottom-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="footer-about-company">
+                            <li>Copyright © 2016</li>
+                            <li>Ahmad Rajabli 153</li>
+                            <li>Tel: 555 77 99</li>
+                        </ul>
+                        <p class="credit-links">Proudly by <a href="#"
+                                                                         target="_blank">Lendock</a></p>
+                        <ul class="social-icons footer-social-icons">
+                            <li><a href="#">
+                                <i class="fa fa-2x fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#">
+                                <i class="fa fa-2x fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#">
+                                <i class="fa fa-2x fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#">
+                                <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href=""><i class="fa fa-2x fa-youtube" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</footer><!--b-footer-->
+        </div><!-- ../footer-bottom-bar -->
+    </footer>
+</div>
+<!--==================================Footer Close=================================-->
 
-<script src="js/vendor/jquery.min.js"></script>
-<script src="js/vendor/what-input.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/foundation.min.js"></script>
-<script src="js/app.js"></script>
-<script>
-    $('#notificationTabs').on('click', '.nav-tabs a', function () {
-        $(this).closest('.dropdown').addClass('dontClose');
-    })
 
-    $('#messagesDown').on('hide.bs.dropdown', function (e) {
-        if ($(this).hasClass('dontClose')) {
-            e.preventDefault();
-        }
-        $(this).removeClass('dontClose');
-    });
-</script>
+<!--==================================Javscript=================================-->
+
+
+<script type="text/javascript" src="js/jquery-lib.js"></script><!-- Jquery Library -->
+<script type="text/javascript" src="js/jquery-migrate-1.3.0.min.js"></script>
+<script type="text/javascript" src='js/mapbox.js'></script>
+<script type="text/javascript" src='js/leaflet.markercluster.js'></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript" src="js/build.min.js"></script>
+<script type="text/javascript" src="lib/chosen/chosen.jquery.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="lib/slick/slick.min.js"></script>
+<script type="text/javascript" src="lib/jquerym.menu/js/jquery.mmenu.min.all.js"></script>
+<script type="text/javascript" src="lib/Magnific-Popup-master/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="lib/jQuery.filer-master/js/jquery.filer.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-rating.js"></script>
+<script type="text/javascript" src="lib/popup/js/classie.js"></script> <!-- Popup -->
+<script type="text/javascript" src="lib/popup/js/modalEffects.js"></script> <!-- Popup -->
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
